@@ -1,0 +1,66 @@
+Total markers: 196
+
+=== Out-of-bounds markers (19) ===
+[28] Carriage House: lat=42.19915, lng=-83.740483
+[46] Delhi Bridge: lat=42.3335, lng=-83.8095
+[52] Dixboro United Methodist Church: lat=42.313267, lng=-83.656017
+[58] An Early Township Blacksmith:Philo Alanson Pritchard (1803-1853): lat=42.21545, lng=-83.699367
+[87] Hog House: lat=42.198983, lng=-83.74035
+[92] Ice house: lat=42.199267, lng=-83.740617
+[106] LeClair Barn: lat=42.198967, lng=-83.74065
+[108] Lower Level of the Barn: lat=42.19885, lng=-83.740633
+[135] Oak Grove Cemetery: lat=42.314067, lng=-83.650333
+[145] Pump House: lat=42.199383, lng=-83.740667
+[153] St. John's Evangelical Lutheran Church: lat=42.35975, lng=-83.70355
+[154] St. Patrick's Church: lat=42.357833, lng=-83.7511
+[155] St. Patrick's Civil War Memorial: lat=42.358833, lng=-83.7499
+[170] Sutherland–Wilson Farm: lat=42.199917, lng=-83.7407
+[173] Thomas Church / Saint Thomas Cemetery: lat=42.225383, lng=-83.925183
+[182] Upper Level of the Barn: lat=42.19895, lng=-83.7407
+[184] Village of Dixboro: lat=42.312217, lng=-83.65655
+[193] Wood Shed (archival; permanently removed): lat=42.19945, lng=-83.7404
+[194] Wood Shed: lat=42.199483, lng=-83.7404
+
+=== Coordinate ranges ===
+Lat: 42.198850 to 42.359750
+Lng: -83.925183 to -83.650333
+
+=== Raw locations for out-of-bounds ===
+[28] Carriage House
+  Raw: 42° 11.949′ N, 83° 44.429′ W
+[46] Delhi Bridge
+  Raw: 42° 20.01′ N, 83° 48.57′ W
+[52] Dixboro United Methodist Church
+  Raw: 42° 18.796′ N, 83° 39.361′ W
+[58] An Early Township Blacksmith:Philo Alanson Pritchard (1803-1853)
+  Raw: 42° 12.927′ N, 83° 41.962′ W
+[87] Hog House
+  Raw: 42° 11.939′ N, 83° 44.421′ W
+[92] Ice house
+  Raw: 42° 11.956′ N, 83° 44.437′ W
+[106] LeClair Barn
+  Raw: 42° 11.938′ N, 83° 44.439′ W
+[108] Lower Level of the Barn
+  Raw: 42° 11.931′ N, 83° 44.438′ W
+[135] Oak Grove Cemetery
+  Raw: 42° 18.844′ N, 83° 39.02′ W
+[145] Pump House
+  Raw: 42° 11.963′ N, 83° 44.44′ W
+[153] St. John's Evangelical Lutheran Church
+  Raw: 42° 21.585′ N, 83° 42.213′ W
+[154] St. Patrick's Church
+  Raw: 42° 21.47′ N, 83° 45.066′ W
+[155] St. Patrick's Civil War Memorial
+  Raw: 42° 21.53′ N, 83° 44.994′ W
+[170] Sutherland–Wilson Farm
+  Raw: 42° 11.995′ N, 83° 44.442′ W
+[173] Thomas Church / Saint Thomas Cemetery
+  Raw: 42° 13.523′ N, 83° 55.511′ W
+[182] Upper Level of the Barn
+  Raw: 42° 11.937′ N, 83° 44.442′ W
+[184] Village of Dixboro
+  Raw: 42° 18.733′ N, 83° 39.393′ W
+[193] Wood Shed (archival; permanently removed)
+  Raw: 42° 11.967′ N, 83° 44.424′ W
+[194] Wood Shed
+  Raw: 42° 11.969′ N, 83° 44.424′ W

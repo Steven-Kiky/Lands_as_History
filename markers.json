@@ -1,0 +1,1766 @@
+[
+  {
+    "id": 0,
+    "title": "The 19th-Century Neighborhood",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279567,
+    "lng": -83.743917,
+    "year": null
+  },
+  {
+    "id": 1,
+    "title": "50 Years of Friendship",
+    "primary": "Colonial/settler",
+    "secondary": "Foriegn nation",
+    "lat": 42.244833,
+    "lng": -83.7117,
+    "year": null
+  },
+  {
+    "id": 2,
+    "title": "Abolition and the Underground Railroad",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.288217,
+    "lng": -83.734633,
+    "year": 2014
+  },
+  {
+    "id": 3,
+    "title": "Acacia",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276433,
+    "lng": -83.738833,
+    "year": 1929
+  },
+  {
+    "id": 4,
+    "title": "The Agricultural Works and Lower Town",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28855,
+    "lng": -83.74035,
+    "year": null
+  },
+  {
+    "id": 5,
+    "title": "Agriculture, Water Power, and Transportation",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2884,
+    "lng": -83.7351,
+    "year": 2014
+  },
+  {
+    "id": 6,
+    "title": "Allen Creek Valley Shapes the Town",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279683,
+    "lng": -83.7497,
+    "year": 2001
+  },
+  {
+    "id": 7,
+    "title": "Alpha Delta Phi",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274267,
+    "lng": -83.74115,
+    "year": 2018
+  },
+  {
+    "id": 8,
+    "title": "Alumni Memorial Hall",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27535,
+    "lng": -83.7402,
+    "year": 2006
+  },
+  {
+    "id": 9,
+    "title": "Ann Arbor and LGBTQ+ History",
+    "primary": "Misc.",
+    "secondary": "",
+    "lat": 42.281417,
+    "lng": -83.74505,
+    "year": 2024
+  },
+  {
+    "id": 10,
+    "title": "Ann Arbor and Human Rights",
+    "primary": "Misc.",
+    "secondary": "",
+    "lat": 42.281417,
+    "lng": -83.74505,
+    "year": 2024
+  },
+  {
+    "id": 11,
+    "title": "Ann Arbor High School",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2804,
+    "lng": -83.740733,
+    "year": null
+  },
+  {
+    "id": 12,
+    "title": "The Ann Arbor Railroad",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279733,
+    "lng": -83.749733,
+    "year": null
+  },
+  {
+    "id": 13,
+    "title": "Ann Arbor Streetcars",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27815,
+    "lng": -83.74885,
+    "year": null
+  },
+  {
+    "id": 14,
+    "title": "Ann Arbor's New \"Streamlined\" Bus Depot",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281567,
+    "lng": -83.749333,
+    "year": null
+  },
+  {
+    "id": 15,
+    "title": "Anson Brown and Early Lower Town",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2885,
+    "lng": -83.735383,
+    "year": 2014
+  },
+  {
+    "id": 16,
+    "title": "Antislavery Society",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.281167,
+    "lng": -83.74455,
+    "year": 1976
+  },
+  {
+    "id": 17,
+    "title": "Architecture & Business on Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28155,
+    "lng": -83.74835,
+    "year": null
+  },
+  {
+    "id": 18,
+    "title": "At Home in the 19th Century",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279567,
+    "lng": -83.743933,
+    "year": null
+  },
+  {
+    "id": 19,
+    "title": "The Baptist Church and Meeting House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288217,
+    "lng": -83.73465,
+    "year": 2014
+  },
+  {
+    "id": 20,
+    "title": "Bethlehem Cemetery",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280667,
+    "lng": -83.786133,
+    "year": null
+  },
+  {
+    "id": 21,
+    "title": "Bethlehem Cemetery Veterans Memorial",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2817,
+    "lng": -83.78615,
+    "year": null
+  },
+  {
+    "id": 22,
+    "title": "Bethlehem United Church of Christ",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276883,
+    "lng": -83.7473,
+    "year": 1983
+  },
+  {
+    "id": 23,
+    "title": "Brown and Fuller's Addition—1832",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288517,
+    "lng": -83.7354,
+    "year": 2014
+  },
+  {
+    "id": 24,
+    "title": "Building New Around Old: The Construction of the Present Courthouse",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281517,
+    "lng": -83.748083,
+    "year": null
+  },
+  {
+    "id": 25,
+    "title": "Business and Banking",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280383,
+    "lng": -83.748467,
+    "year": null
+  },
+  {
+    "id": 26,
+    "title": "Campus Patterns of Residential Life",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275083,
+    "lng": -83.731833,
+    "year": null
+  },
+  {
+    "id": 27,
+    "title": "Carnegie Library",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281133,
+    "lng": -83.739983,
+    "year": null
+  },
+  {
+    "id": 28,
+    "title": "Carriage House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.19915,
+    "lng": -83.740483,
+    "year": null
+  },
+  {
+    "id": 29,
+    "title": "The Center of Power And Transportation",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288617,
+    "lng": -83.74015,
+    "year": null
+  },
+  {
+    "id": 30,
+    "title": "Centers for Communications on Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2822,
+    "lng": -83.748583,
+    "year": null
+  },
+  {
+    "id": 31,
+    "title": "The Central Forty and The Diag 1837",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2767,
+    "lng": -83.738033,
+    "year": 2006
+  },
+  {
+    "id": 32,
+    "title": "Central Title Service Building",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280467,
+    "lng": -83.7465,
+    "year": 1986
+  },
+  {
+    "id": 33,
+    "title": "The Changing Face of North Fourth Avenue",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.748233,
+    "year": null
+  },
+  {
+    "id": 34,
+    "title": "Changing Retail Patterns",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279667,
+    "lng": -83.748367,
+    "year": null
+  },
+  {
+    "id": 35,
+    "title": "Charles Fox",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276133,
+    "lng": -83.737567,
+    "year": null
+  },
+  {
+    "id": 36,
+    "title": "Cider Mill 1887",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273933,
+    "lng": -83.667817,
+    "year": null
+  },
+  {
+    "id": 37,
+    "title": "The Civil War and Lower Town",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.288233,
+    "lng": -83.734717,
+    "year": 2014
+  },
+  {
+    "id": 38,
+    "title": "The Clairvoyant Physician: Dr. Daniel Kellogg's Building, 1874 and 1920s",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.289267,
+    "lng": -83.739417,
+    "year": null
+  },
+  {
+    "id": 39,
+    "title": "Commerce on the \"Ann Street Block\"",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.282267,
+    "lng": -83.748267,
+    "year": null
+  },
+  {
+    "id": 40,
+    "title": "Connecting With Nature",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2748,
+    "lng": -83.668217,
+    "year": null
+  },
+  {
+    "id": 41,
+    "title": "A Corner Landmark on Huron and North Fourth",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.748233,
+    "year": null
+  },
+  {
+    "id": 42,
+    "title": "The Corners of South University and East University Avenues",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275333,
+    "lng": -83.7357,
+    "year": null
+  },
+  {
+    "id": 43,
+    "title": "Courthouse Square: A Center of Civic Life",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28165,
+    "lng": -83.74835,
+    "year": null
+  },
+  {
+    "id": 44,
+    "title": "David McCollum's House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288417,
+    "lng": -83.735133,
+    "year": 2014
+  },
+  {
+    "id": 45,
+    "title": "The David R. Byrd Center \nPittsfield Township, Michigan",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.239783,
+    "lng": -83.758967,
+    "year": null
+  },
+  {
+    "id": 46,
+    "title": "Delhi Bridge",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.3335,
+    "lng": -83.8095,
+    "year": null
+  },
+  {
+    "id": 47,
+    "title": "Delta Sigma Delta",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2722,
+    "lng": -83.729717,
+    "year": 1982
+  },
+  {
+    "id": 48,
+    "title": "Delta Upsilon Fraternity \n",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.272567,
+    "lng": -83.732017,
+    "year": 1991
+  },
+  {
+    "id": 49,
+    "title": "The Denison Archway",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27545,
+    "lng": -83.73635,
+    "year": null
+  },
+  {
+    "id": 50,
+    "title": "Departing Heroes and the Home Front",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28165,
+    "lng": -83.74835,
+    "year": null
+  },
+  {
+    "id": 51,
+    "title": "The Detroit Observatory \n1854",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281917,
+    "lng": -83.731283,
+    "year": 2004
+  },
+  {
+    "id": 52,
+    "title": "Dixboro United Methodist Church",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.313267,
+    "lng": -83.656017,
+    "year": null
+  },
+  {
+    "id": 53,
+    "title": "Douglass Houghton",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2762,
+    "lng": -83.737667,
+    "year": null
+  },
+  {
+    "id": 54,
+    "title": "Downtown Movie Theaters",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279667,
+    "lng": -83.748367,
+    "year": null
+  },
+  {
+    "id": 55,
+    "title": "Dry Goods",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280583,
+    "lng": -83.748767,
+    "year": null
+  },
+  {
+    "id": 56,
+    "title": "Earhart Manor",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2737,
+    "lng": -83.68115,
+    "year": 1999
+  },
+  {
+    "id": 57,
+    "title": "Early Power and Transportation",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2886,
+    "lng": -83.740383,
+    "year": null
+  },
+  {
+    "id": 58,
+    "title": "An Early Township Blacksmith:Philo Alanson Pritchard (1803-1853)",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.21545,
+    "lng": -83.699367,
+    "year": null
+  },
+  {
+    "id": 59,
+    "title": "East University Avenue Campus Boundary 1837",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27625,
+    "lng": -83.735883,
+    "year": 1996
+  },
+  {
+    "id": 60,
+    "title": "Eating and Drinking in Ann Arbor",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280583,
+    "lng": -83.7488,
+    "year": null
+  },
+  {
+    "id": 61,
+    "title": "Engineering at Michigan 1854-2004",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27535,
+    "lng": -83.73615,
+    "year": null
+  },
+  {
+    "id": 62,
+    "title": "Essential City Services",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281483,
+    "lng": -83.746117,
+    "year": null
+  },
+  {
+    "id": 63,
+    "title": "Everyone Loves a Parade",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.278167,
+    "lng": -83.748817,
+    "year": null
+  },
+  {
+    "id": 64,
+    "title": "First Medical Buildings 1850-1925",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276933,
+    "lng": -83.73605,
+    "year": 1999
+  },
+  {
+    "id": 65,
+    "title": "First National Building 1929",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280317,
+    "lng": -83.748417,
+    "year": null
+  },
+  {
+    "id": 66,
+    "title": "First Presbyterian Church Cornerstone",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2739,
+    "lng": -83.730833,
+    "year": 2003
+  },
+  {
+    "id": 67,
+    "title": "First University Hospital 1869",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2785,
+    "lng": -83.737933,
+    "year": 1999
+  },
+  {
+    "id": 68,
+    "title": "Forest Hill",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.277783,
+    "lng": -83.73025,
+    "year": null
+  },
+  {
+    "id": 69,
+    "title": "A Former Bank and Estate on Ann Street",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.74825,
+    "year": null
+  },
+  {
+    "id": 70,
+    "title": "Four World Records: Jesse Owens",
+    "primary": "African American/Enslaved/Freed Blacks",
+    "secondary": "",
+    "lat": 42.268567,
+    "lng": -83.741483,
+    "year": null
+  },
+  {
+    "id": 71,
+    "title": "From Horses to Cars: Early Autos, Service and Parts",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280833,
+    "lng": -83.749667,
+    "year": null
+  },
+  {
+    "id": 72,
+    "title": "From Industry to Parks",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288533,
+    "lng": -83.740367,
+    "year": null
+  },
+  {
+    "id": 73,
+    "title": "From Interurbans to Buses",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281583,
+    "lng": -83.749417,
+    "year": null
+  },
+  {
+    "id": 74,
+    "title": "From Liveries to Taxis",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279317,
+    "lng": -83.74225,
+    "year": null
+  },
+  {
+    "id": 75,
+    "title": "Frontier Cozy",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273767,
+    "lng": -83.6672,
+    "year": null
+  },
+  {
+    "id": 76,
+    "title": "FUMC's BSA Troop 4: Michigan Centennial Organization",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280733,
+    "lng": -83.741233,
+    "year": null
+  },
+  {
+    "id": 77,
+    "title": "Geddesburg",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2704,
+    "lng": -83.6718,
+    "year": null
+  },
+  {
+    "id": 78,
+    "title": "Germans in Ann Arbor",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280467,
+    "lng": -83.749683,
+    "year": null
+  },
+  {
+    "id": 79,
+    "title": "Germans on Ashley Street",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280417,
+    "lng": -83.7497,
+    "year": null
+  },
+  {
+    "id": 80,
+    "title": "Governor Alpheus Felch",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28115,
+    "lng": -83.73705,
+    "year": 1973
+  },
+  {
+    "id": 81,
+    "title": "Grist Mill 1873",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274,
+    "lng": -83.667883,
+    "year": null
+  },
+  {
+    "id": 82,
+    "title": "The Gristmill",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274033,
+    "lng": -83.6678,
+    "year": null
+  },
+  {
+    "id": 83,
+    "title": "The Growth of City Services",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281483,
+    "lng": -83.74595,
+    "year": null
+  },
+  {
+    "id": 84,
+    "title": "Hardware",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280567,
+    "lng": -83.748733,
+    "year": null
+  },
+  {
+    "id": 85,
+    "title": "Harris Hall",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2813,
+    "lng": -83.741017,
+    "year": null
+  },
+  {
+    "id": 86,
+    "title": "Hill Auditorium",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.278433,
+    "lng": -83.73935,
+    "year": 2006
+  },
+  {
+    "id": 87,
+    "title": "Hog House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.198983,
+    "lng": -83.74035,
+    "year": null
+  },
+  {
+    "id": 88,
+    "title": "Homes of Early Lower Town Settlers",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288483,
+    "lng": -83.735333,
+    "year": 2014
+  },
+  {
+    "id": 89,
+    "title": "Hospitality on Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281533,
+    "lng": -83.7483,
+    "year": null
+  },
+  {
+    "id": 90,
+    "title": "How it Happened",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28305,
+    "lng": -83.72015,
+    "year": null
+  },
+  {
+    "id": 91,
+    "title": "Hoyt Garrod Post and Family History",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273583,
+    "lng": -83.6678,
+    "year": null
+  },
+  {
+    "id": 92,
+    "title": "Ice house",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.199267,
+    "lng": -83.740617,
+    "year": null
+  },
+  {
+    "id": 93,
+    "title": "Ideation Building 1983",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279467,
+    "lng": -83.74095,
+    "year": null
+  },
+  {
+    "id": 94,
+    "title": "In memory of all Veterans",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.29315,
+    "lng": -83.740067,
+    "year": null
+  },
+  {
+    "id": 95,
+    "title": "Indian Trails, Roads, and Trains",
+    "primary": "Indigenous",
+    "secondary": "Colonial/settler",
+    "lat": 42.288267,
+    "lng": -83.734783,
+    "year": 2014
+  },
+  {
+    "id": 96,
+    "title": "Industry and Recreation on Allen Creek",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279733,
+    "lng": -83.749733,
+    "year": null
+  },
+  {
+    "id": 97,
+    "title": "The James Foster House of Art",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279633,
+    "lng": -83.740933,
+    "year": null
+  },
+  {
+    "id": 98,
+    "title": "John F. Kennedy Defines the Peace Corps",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275067,
+    "lng": -83.741083,
+    "year": null
+  },
+  {
+    "id": 99,
+    "title": "The Jonathan and Almy Lund House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288383,
+    "lng": -83.73505,
+    "year": 2014
+  },
+  {
+    "id": 100,
+    "title": "Joseph Whiting",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2761,
+    "lng": -83.73775,
+    "year": null
+  },
+  {
+    "id": 101,
+    "title": "Kempf House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2789,
+    "lng": -83.744233,
+    "year": 1988
+  },
+  {
+    "id": 102,
+    "title": "A Landmark of Civic Pride on Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281317,
+    "lng": -83.748633,
+    "year": null
+  },
+  {
+    "id": 103,
+    "title": "Landscape Transformed",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274483,
+    "lng": -83.6681,
+    "year": null
+  },
+  {
+    "id": 104,
+    "title": "The Last Deposit",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281333,
+    "lng": -83.74835,
+    "year": null
+  },
+  {
+    "id": 105,
+    "title": "Law Quadrangle",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274767,
+    "lng": -83.739383,
+    "year": 2006
+  },
+  {
+    "id": 106,
+    "title": "LeClair Barn",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.198967,
+    "lng": -83.74065,
+    "year": 2015
+  },
+  {
+    "id": 107,
+    "title": "Log Cabin",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273667,
+    "lng": -83.6672,
+    "year": null
+  },
+  {
+    "id": 108,
+    "title": "Lower Level of the Barn",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.19885,
+    "lng": -83.740633,
+    "year": null
+  },
+  {
+    "id": 109,
+    "title": "Lower Town Parks, Recreation, and Trails",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28815,
+    "lng": -83.735617,
+    "year": 2014
+  },
+  {
+    "id": 110,
+    "title": "Lower Town's Flour Mills",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288667,
+    "lng": -83.740417,
+    "year": null
+  },
+  {
+    "id": 111,
+    "title": "Main Street in the 1890s",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.748283,
+    "year": null
+  },
+  {
+    "id": 112,
+    "title": "Main Street Shopping Expands",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279483,
+    "lng": -83.748467,
+    "year": null
+  },
+  {
+    "id": 113,
+    "title": "The Main Street Shopping Experience",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279483,
+    "lng": -83.748533,
+    "year": 2001
+  },
+  {
+    "id": 114,
+    "title": "The Making of a Great University",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275767,
+    "lng": -83.7409,
+    "year": null
+  },
+  {
+    "id": 115,
+    "title": "Manufacturing in Lower Town: The Ann Arbor Agricultural Works",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28785,
+    "lng": -83.73495,
+    "year": 2014
+  },
+  {
+    "id": 116,
+    "title": "Martha Cook Building",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274867,
+    "lng": -83.737967,
+    "year": 1990
+  },
+  {
+    "id": 117,
+    "title": "McDivitt-White Plaza",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275167,
+    "lng": -83.735867,
+    "year": 1965
+  },
+  {
+    "id": 118,
+    "title": "A Meeting Place for Ann Arbor's Black Community",
+    "primary": "African American/Enslaved/Freed Blacks",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.74825,
+    "year": null
+  },
+  {
+    "id": 119,
+    "title": "Michigan Becomes a State",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281533,
+    "lng": -83.748133,
+    "year": 1966
+  },
+  {
+    "id": 120,
+    "title": "Michigan Central Railroad Depot",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.287133,
+    "lng": -83.741667,
+    "year": 1976
+  },
+  {
+    "id": 121,
+    "title": "Michigan Chapter of the Scabbard and Blade",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.277533,
+    "lng": -83.738233,
+    "year": null
+  },
+  {
+    "id": 122,
+    "title": "Michigan League",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279283,
+    "lng": -83.738067,
+    "year": 2004
+  },
+  {
+    "id": 123,
+    "title": "Michigan Municipal League",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.297433,
+    "lng": -83.693483,
+    "year": 1992
+  },
+  {
+    "id": 124,
+    "title": "The Michigan Ross Bur Oak",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2733,
+    "lng": -83.738017,
+    "year": null
+  },
+  {
+    "id": 125,
+    "title": "Michigan Summer Symposium in Theoretical Physics",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276717,
+    "lng": -83.73605,
+    "year": null
+  },
+  {
+    "id": 126,
+    "title": "Michigan Theatre",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279433,
+    "lng": -83.741817,
+    "year": 1980
+  },
+  {
+    "id": 127,
+    "title": "Michigan Union",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275167,
+    "lng": -83.740867,
+    "year": 2004
+  },
+  {
+    "id": 128,
+    "title": "Michigan Union 75th Anniversary",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275167,
+    "lng": -83.7411,
+    "year": null
+  },
+  {
+    "id": 129,
+    "title": "The Michigan Union and the Peace Corps",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275183,
+    "lng": -83.740517,
+    "year": null
+  },
+  {
+    "id": 130,
+    "title": "Michigan Union Fifty Year History",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275567,
+    "lng": -83.741417,
+    "year": 1954
+  },
+  {
+    "id": 131,
+    "title": "Michigan's First Jewish Cemetery",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281167,
+    "lng": -83.73735,
+    "year": 1983
+  },
+  {
+    "id": 132,
+    "title": "Native American Trails",
+    "primary": "Indigenous",
+    "secondary": "Colonial/settler",
+    "lat": 42.274017,
+    "lng": -83.66805,
+    "year": null
+  },
+  {
+    "id": 133,
+    "title": "New City Government, New Issues, and a New City Hall",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.28155,
+    "lng": -83.746133,
+    "year": null
+  },
+  {
+    "id": 134,
+    "title": "Nichols Arboretum",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275817,
+    "lng": -83.724767,
+    "year": 1907
+  },
+  {
+    "id": 135,
+    "title": "Oak Grove Cemetery",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.314067,
+    "lng": -83.650333,
+    "year": null
+  },
+  {
+    "id": 136,
+    "title": "Old Main Hospital (1925)",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28245,
+    "lng": -83.731433,
+    "year": 2000
+  },
+  {
+    "id": 137,
+    "title": "The Parker Family & Mill",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273633,
+    "lng": -83.667767,
+    "year": null
+  },
+  {
+    "id": 138,
+    "title": "Phi Delta Theta Fraternity House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.274817,
+    "lng": -83.730367,
+    "year": 2006
+  },
+  {
+    "id": 139,
+    "title": "Pioneer Cemetery",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.246317,
+    "lng": -83.686083,
+    "year": null
+  },
+  {
+    "id": 140,
+    "title": "Politics and Processions on Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281667,
+    "lng": -83.74835,
+    "year": null
+  },
+  {
+    "id": 141,
+    "title": "Power and Transportation",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.278083,
+    "lng": -83.748767,
+    "year": null
+  },
+  {
+    "id": 142,
+    "title": "The Power of Fleming Creek",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273983,
+    "lng": -83.667333,
+    "year": null
+  },
+  {
+    "id": 143,
+    "title": "The President's House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275067,
+    "lng": -83.738333,
+    "year": 1995
+  },
+  {
+    "id": 144,
+    "title": "The Professors' Monument",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275933,
+    "lng": -83.737567,
+    "year": 1996
+  },
+  {
+    "id": 145,
+    "title": "Pump House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.199383,
+    "lng": -83.740667,
+    "year": null
+  },
+  {
+    "id": 146,
+    "title": "Rackham School of Graduate Studies",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.28055,
+    "lng": -83.738417,
+    "year": 2006
+  },
+  {
+    "id": 147,
+    "title": "Redbud Grove",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.286667,
+    "lng": -83.734617,
+    "year": null
+  },
+  {
+    "id": 148,
+    "title": "Residential Life in mid-19th Century Ann Arbor",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2793,
+    "lng": -83.7443,
+    "year": null
+  },
+  {
+    "id": 149,
+    "title": "Revolutionary War Patriot",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.277767,
+    "lng": -83.7302,
+    "year": null
+  },
+  {
+    "id": 150,
+    "title": "Riverbank Rescue",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.283033,
+    "lng": -83.7202,
+    "year": 2006
+  },
+  {
+    "id": 151,
+    "title": "Robert Brackett Memorial",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276233,
+    "lng": -83.738917,
+    "year": 1966
+  },
+  {
+    "id": 152,
+    "title": "St. Andrew’s Episcopal Church",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.283283,
+    "lng": -83.74365,
+    "year": 2020
+  },
+  {
+    "id": 153,
+    "title": "St. John's Evangelical Lutheran Church",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.35975,
+    "lng": -83.70355,
+    "year": null
+  },
+  {
+    "id": 154,
+    "title": "St. Patrick's Church",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.357833,
+    "lng": -83.7511,
+    "year": 1992
+  },
+  {
+    "id": 155,
+    "title": "St. Patrick's Civil War Memorial",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.358833,
+    "lng": -83.7499,
+    "year": null
+  },
+  {
+    "id": 156,
+    "title": "St. Thomas the Apostle Church",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.284783,
+    "lng": -83.741633,
+    "year": 1985
+  },
+  {
+    "id": 157,
+    "title": "Samuel Denton",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27605,
+    "lng": -83.737617,
+    "year": null
+  },
+  {
+    "id": 158,
+    "title": "Schools and Churches",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.281333,
+    "lng": -83.740983,
+    "year": null
+  },
+  {
+    "id": 159,
+    "title": "Schools In Lower Town",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.28795,
+    "lng": -83.735183,
+    "year": 2014
+  },
+  {
+    "id": 160,
+    "title": "A Second Shopping District",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27835,
+    "lng": -83.740583,
+    "year": null
+  },
+  {
+    "id": 161,
+    "title": "Shagbark Hickory",
+    "primary": "Colonial/settler",
+    "secondary": "Foriegn nation",
+    "lat": 42.282917,
+    "lng": -83.72015,
+    "year": 2017
+  },
+  {
+    "id": 162,
+    "title": "Shopping on East Huron Street",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.748283,
+    "year": null
+  },
+  {
+    "id": 163,
+    "title": "Simpson Memorial Institute",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2818,
+    "lng": -83.730967,
+    "year": 2000
+  },
+  {
+    "id": 164,
+    "title": "Social and Political Change on South University",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.275067,
+    "lng": -83.735867,
+    "year": null
+  },
+  {
+    "id": 165,
+    "title": "South University and Forest Avenues",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.2751,
+    "lng": -83.7337,
+    "year": null
+  },
+  {
+    "id": 166,
+    "title": "Spanish-American War Memorial",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27595,
+    "lng": -83.739117,
+    "year": 1899
+  },
+  {
+    "id": 167,
+    "title": "The Staeblers and the Germania/American Hotel",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280433,
+    "lng": -83.7497,
+    "year": null
+  },
+  {
+    "id": 168,
+    "title": "The Streets Around Courthouse Square",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282267,
+    "lng": -83.748267,
+    "year": null
+  },
+  {
+    "id": 169,
+    "title": "A Supply Side of Town",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.283117,
+    "lng": -83.746933,
+    "year": 2023
+  },
+  {
+    "id": 170,
+    "title": "Sutherland–Wilson Farm",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.199917,
+    "lng": -83.7407,
+    "year": 2014
+  },
+  {
+    "id": 171,
+    "title": "Tappan Hall",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27555,
+    "lng": -83.739433,
+    "year": 1999
+  },
+  {
+    "id": 172,
+    "title": "Terhune Memorial Park",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.246517,
+    "lng": -83.6863,
+    "year": 1920
+  },
+  {
+    "id": 173,
+    "title": "Thomas Church / Saint Thomas Cemetery",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.225383,
+    "lng": -83.925183,
+    "year": 1994
+  },
+  {
+    "id": 174,
+    "title": "Three Generations of Metzgers on Washington Street",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.280817,
+    "lng": -83.749667,
+    "year": null
+  },
+  {
+    "id": 175,
+    "title": "Ticknor-Campbell House",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.244933,
+    "lng": -83.710633,
+    "year": 1981
+  },
+  {
+    "id": 176,
+    "title": "Town and Gown: Entertainment and Changing Culture",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27935,
+    "lng": -83.740717,
+    "year": null
+  },
+  {
+    "id": 177,
+    "title": "Transportation, Electric Power, and Gas",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288083,
+    "lng": -83.7354,
+    "year": 2014
+  },
+  {
+    "id": 178,
+    "title": "The Underground Railroad",
+    "primary": "Colonial/settler",
+    "secondary": "African Americans/Enslaved/Freed Blacks/etc.",
+    "lat": 42.289183,
+    "lng": -83.73955,
+    "year": null
+  },
+  {
+    "id": 179,
+    "title": "The University Expands",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.27845,
+    "lng": -83.740433,
+    "year": null
+  },
+  {
+    "id": 180,
+    "title": "University of Michigan Campus 1907",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275683,
+    "lng": -83.74085,
+    "year": null
+  },
+  {
+    "id": 181,
+    "title": "The University of Michigan Men's Glee Club",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279017,
+    "lng": -83.73845,
+    "year": 2009
+  },
+  {
+    "id": 182,
+    "title": "Upper Level of the Barn",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.19895,
+    "lng": -83.7407,
+    "year": null
+  },
+  {
+    "id": 183,
+    "title": "Uptown Theaters",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.279317,
+    "lng": -83.742183,
+    "year": null
+  },
+  {
+    "id": 184,
+    "title": "Village of Dixboro",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.312217,
+    "lng": -83.65655,
+    "year": null
+  },
+  {
+    "id": 185,
+    "title": "Washtenaw County War Memorial",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.277433,
+    "lng": -83.73035,
+    "year": 1914
+  },
+  {
+    "id": 186,
+    "title": "The Washtenaw House and Lower Town Decline",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.28825,
+    "lng": -83.73475,
+    "year": 2014
+  },
+  {
+    "id": 187,
+    "title": "The Washtenaw House Hotel",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.288267,
+    "lng": -83.734767,
+    "year": 2014
+  },
+  {
+    "id": 188,
+    "title": "Weeping Japanese Cherry (Prunus subhirtella 'Pendula')",
+    "primary": "Colonial/settler",
+    "secondary": "Foriegn nation",
+    "lat": 42.282783,
+    "lng": -83.716583,
+    "year": 2017
+  },
+  {
+    "id": 189,
+    "title": "Welcome to the Parker Family Mills!",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.273983,
+    "lng": -83.667983,
+    "year": null
+  },
+  {
+    "id": 190,
+    "title": "West Engineering - West Hall",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275533,
+    "lng": -83.736317,
+    "year": 2004
+  },
+  {
+    "id": 191,
+    "title": "White Willow (Salix alba)",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.282033,
+    "lng": -83.72135,
+    "year": 2017
+  },
+  {
+    "id": 192,
+    "title": "William L. Clements Library",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.275083,
+    "lng": -83.738017,
+    "year": 2006
+  },
+  {
+    "id": 193,
+    "title": "Wood Shed (archival; permanently removed)",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.19945,
+    "lng": -83.7404,
+    "year": null
+  },
+  {
+    "id": 194,
+    "title": "Wood Shed",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.199483,
+    "lng": -83.7404,
+    "year": null
+  },
+  {
+    "id": 195,
+    "title": "Xi Psi Phi Fraternity (Bench Marker)",
+    "primary": "Colonial/settler",
+    "secondary": "",
+    "lat": 42.276167,
+    "lng": -83.7389,
+    "year": 1939
+  }
+]

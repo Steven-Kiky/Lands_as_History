@@ -1,0 +1,26 @@
+=== Index 0-100 (101 entries) ===
+Primary Subject distribution: {'Colonial/settler': 97, 'Misc.': 2, 'African American/Enslaved/Freed Blacks': 1, 'Indigenous': 1}
+Secondary Subject distribution: {'Foriegn nation': 1, 'African Americans/Enslaved/Freed Blacks/etc.': 5, 'Colonial/settler': 1}
+Entries with Secondary Subject: 7
+
+=== Index 101-196 (96 entries) ===
+Primary Subject distribution: {'Colonial/settler': 92, 'African American/Enslaved/Freed Blacks': 1, 'Indigenous': 2, 'Misc.': 1}
+Secondary Subject distribution: {'Colonial/settler': 2, 'African Americans/Enslaved/Freed Blacks/etc.': 2, 'Foriegn nation': 1}
+Entries with Secondary Subject: 5
+
+=== Entries 101+ with Secondary Subject ===
+[132] Native American Trails | Pri=Indigenous | Sec=Colonial/settler
+[133] New City Government, New Issues, and a New City Hall | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[178] The Underground Railroad | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[188] Weeping Japanese Cherry (Prunus subhirtella 'Pendula') | Pri=Colonial/settler | Sec=Foriegn nation
+[196] Native American Land Gift 1817 | Pri=Indigenous | Sec=Colonial/settler
+
+=== Entries 0-100 with Secondary Subject ===
+[1] 50 Years of Friendship | Pri=Colonial/settler | Sec=Foriegn nation
+[2] Abolition and the Underground Railroad | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[16] Antislavery Society | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[37] The Civil War and Lower Town | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[39] Commerce on the "Ann Street Block" | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[45] The David R. Byrd Center 
+Pittsfield Township, Michigan | Pri=Colonial/settler | Sec=African Americans/Enslaved/Freed Blacks/etc.
+[95] Indian Trails, Roads, and Trains | Pri=Indigenous | Sec=Colonial/settler

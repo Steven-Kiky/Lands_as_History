@@ -1,0 +1,389 @@
+[101] Kempf House
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Education
+
+[102] A Landmark of Civic Pride on Courthouse Square
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Air & Space
+
+[103] Landscape Transformed
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Agriculture, Secondary=None
+
+[104] The Last Deposit
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Military
+
+[105] Law Quadrangle
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[106] LeClair Barn
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=Settlements & Settlers
+
+[107] Log Cabin
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Agriculture, Secondary=Notable Buildings
+
+[108] Lower Level of the Barn
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Air & Space, Secondary=Arts, Letters, Music
+
+[109] Lower Town Parks, Recreation, and Trails
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Roads & Vehicles
+
+[110] Lower Town's Flour Mills
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Settlements & Settlers
+
+[111] Main Street in the 1890s
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[112] Main Street Shopping Expands
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=None
+
+[113] The Main Street Shopping Experience
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Arts, Letters, Music
+
+[114] The Making of a Great University
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=None
+
+[115] Manufacturing in Lower Town: The Ann Arbor Agricultural Works
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[116] Martha Cook Building
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Education
+
+[117] McDivitt-White Plaza
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Air & Space, Secondary=None
+
+[118] A Meeting Place for Ann Arbor's Black Community
+  OLD: Primary=African American/Enslaved/Freed Blacks, Secondary=None
+  NEW: Primary=African Americans, Secondary=Industry & Commerce
+
+[119] Michigan Becomes a State
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=Notable Buildings
+
+[120] Michigan Central Railroad Depot
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Railroads & Streetcars
+
+[121] Michigan Chapter of the Scabbard and Blade
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Military, Secondary=Fraternal or Sororal Organizations
+
+[122] Michigan League
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[123] Michigan Municipal League
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Political Subdivisions, Secondary=None
+
+[124] The Michigan Ross Bur Oak
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Native Americans, Secondary=Education
+
+[125] Michigan Summer Symposium in Theoretical Physics
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Science & Medicine, Secondary=None
+
+[126] Michigan Theatre
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=Entertainment
+
+[127] Michigan Union
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[128] Michigan Union 75th Anniversary
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Settlements & Settlers
+
+[129] The Michigan Union and the Peace Corps
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Arts, Letters, Music
+
+[130] Michigan Union Fifty Year History
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Industry & Commerce
+
+[131] Michigan's First Jewish Cemetery
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Arts, Letters, Music
+
+[132] Native American Trails
+  OLD: Primary=Indigenous, Secondary=Colonial/settler
+  NEW: Primary=Native Americans, Secondary=Arts, Letters, Music
+
+[133] New City Government, New Issues, and a New City Hall
+  OLD: Primary=Colonial/settler, Secondary=African Americans/Enslaved/Freed Blacks/etc.
+  NEW: Primary=Civil Rights, Secondary=Architecture
+
+[134] Nichols Arboretum
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Parks & Recreational Areas
+
+[135] Oak Grove Cemetery
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Architecture
+
+[136] Old Main Hospital (1925)
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[137] The Parker Family & Mill
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[138] Phi Delta Theta Fraternity House
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Fraternal or Sororal Organizations
+
+[139] Pioneer Cemetery
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Settlements & Settlers
+
+[140] Politics and Processions on Courthouse Square
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Fraternal or Sororal Organizations
+
+[141] Power and Transportation
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Railroads & Streetcars
+
+[142] The Power of Fleming Creek
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Arts, Letters, Music
+
+[143] The President's House
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Arts, Letters, Music
+
+[144] The Professors' Monument
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Science & Medicine
+
+[145] Pump House
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Roads & Vehicles
+
+[146] Rackham School of Graduate Studies
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=African Americans, Secondary=Education
+
+[147] Redbud Grove
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=War, World II, Secondary=None
+
+[148] Residential Life in mid-19th Century Ann Arbor
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Education
+
+[149] Revolutionary War Patriot
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=War, US Revolutionary, Secondary=Settlements & Settlers
+
+[150] Riverbank Rescue
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Industry & Commerce
+
+[151] Robert Brackett Memorial
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Fraternal or Sororal Organizations
+
+[152] St. Andrew’s Episcopal Church
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Architecture
+
+[153] St. John's Evangelical Lutheran Church
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Settlements & Settlers
+
+[154] St. Patrick's Church
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=None
+
+[155] St. Patrick's Civil War Memorial
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=War, US Civil, Secondary=Railroads & Streetcars
+
+[156] St. Thomas the Apostle Church
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Education
+
+[157] Samuel Denton
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Arts, Letters, Music
+
+[158] Schools and Churches
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Education
+
+[159] Schools In Lower Town
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Education
+
+[160] A Second Shopping District
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[161] Shagbark Hickory
+  OLD: Primary=Misc., Secondary=None
+  NEW: Primary=Education, Secondary=Industry & Commerce
+
+[162] Shopping on East Huron Street
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[163] Simpson Memorial Institute
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[164] Social and Political Change on South University
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Civil Rights, Secondary=Education
+
+[165] South University and Forest Avenues
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[166] Spanish-American War Memorial
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=War, Spanish-American, Secondary=None
+
+[167] The Staeblers and the Germania/American Hotel
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[168] The Streets Around Courthouse Square
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Native Americans, Secondary=Education
+
+[169] A Supply Side of Town
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Railroads & Streetcars
+
+[170] Sutherland–Wilson Farm
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=Agriculture
+
+[171] Tappan Hall
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[172] Terhune Memorial Park
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Settlements & Settlers
+
+[173] Thomas Church / Saint Thomas Cemetery
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Arts, Letters, Music
+
+[174] Three Generations of Metzgers on Washington Street
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Settlements & Settlers
+
+[175] Ticknor-Campbell House
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Settlements & Settlers
+
+[176] Town and Gown: Entertainment and Changing Culture
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=Education
+
+[177] Transportation, Electric Power, and Gas
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Railroads & Streetcars
+
+[178] The Underground Railroad
+  OLD: Primary=Colonial/settler, Secondary=African Americans/Enslaved/Freed Blacks/etc.
+  NEW: Primary=African Americans, Secondary=Education
+
+[179] The University Expands
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[180] University of Michigan Campus 1907
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[181] The University of Michigan Men's Glee Club
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=None
+
+[182] Upper Level of the Barn
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Arts, Letters, Music
+
+[183] Uptown Theaters
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Arts, Letters, Music, Secondary=Entertainment
+
+[184] Village of Dixboro
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Native Americans, Secondary=Churches & Religion
+
+[185] Washtenaw County War Memorial
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Churches & Religion, Secondary=War, US Civil
+
+[186] The Washtenaw House and Lower Town Decline
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[187] The Washtenaw House Hotel
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Native Americans, Secondary=Education
+
+[188] Weeping Japanese Cherry (Prunus subhirtella 'Pendula')
+  OLD: Primary=Colonial/settler, Secondary=Foriegn nation
+  NEW: Primary=Parks & Recreational Areas, Secondary=Horticulture & Forestry
+
+[189] Welcome to the Parker Family Mills!
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Architecture, Secondary=Industry & Commerce
+
+[190] West Engineering - West Hall
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[191] White Willow (Salix alba)
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Parks & Recreational Areas, Secondary=Horticulture & Forestry
+
+[192] William L. Clements Library
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Architecture
+
+[193] Wood Shed (archival; permanently removed)
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Roads & Vehicles, Secondary=Arts, Letters, Music
+
+[194] Wood Shed
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Industry & Commerce, Secondary=Roads & Vehicles
+
+[195] Xi Psi Phi Fraternity (Bench Marker)
+  OLD: Primary=Colonial/settler, Secondary=None
+  NEW: Primary=Education, Secondary=Arts, Letters, Music
+
+[196] Native American Land Gift 1817
+  OLD: Primary=Indigenous, Secondary=Colonial/settler
+  NEW: Primary=Native Americans, Secondary=Churches & Religion
+
+
+--- Summary ---
+Total entries checked: 96
+Entries changed: 96
+Entries unchanged: 0

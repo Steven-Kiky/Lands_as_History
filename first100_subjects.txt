@@ -1,0 +1,216 @@
+[0] The 19th-Century Neighborhood
+  Primary: Colonial/settler | Secondary: None
+[1] 50 Years of Friendship
+  Primary: Colonial/settler | Secondary: Foriegn nation
+[2] Abolition and the Underground Railroad
+  Primary: Colonial/settler | Secondary: African Americans/Enslaved/Freed Blacks/etc.
+[3] Acacia
+  Primary: Colonial/settler | Secondary: None
+[4] The Agricultural Works and Lower Town
+  Primary: Colonial/settler | Secondary: None
+[5] Agriculture, Water Power, and Transportation
+  Primary: Colonial/settler | Secondary: None
+[6] Allen Creek Valley Shapes the Town
+  Primary: Colonial/settler | Secondary: None
+[7] Alpha Delta Phi
+  Primary: Colonial/settler | Secondary: None
+[8] Alumni Memorial Hall
+  Primary: Colonial/settler | Secondary: None
+[9] Ann Arbor and LGBTQ+ History
+  Primary: Misc. | Secondary: None
+[10] Ann Arbor and Human Rights
+  Primary: Misc. | Secondary: None
+[11] Ann Arbor High School
+  Primary: Colonial/settler | Secondary: None
+[12] The Ann Arbor Railroad
+  Primary: Colonial/settler | Secondary: None
+[13] Ann Arbor Streetcars
+  Primary: Colonial/settler | Secondary: None
+[14] Ann Arbor's New "Streamlined" Bus Depot
+  Primary: Colonial/settler | Secondary: None
+[15] Anson Brown and Early Lower Town
+  Primary: Colonial/settler | Secondary: None
+[16] Antislavery Society
+  Primary: Colonial/settler | Secondary: African Americans/Enslaved/Freed Blacks/etc.
+[17] Architecture & Business on Courthouse Square
+  Primary: Colonial/settler | Secondary: None
+[18] At Home in the 19th Century
+  Primary: Colonial/settler | Secondary: None
+[19] The Baptist Church and Meeting House
+  Primary: Colonial/settler | Secondary: None
+[20] Bethlehem Cemetery
+  Primary: Colonial/settler | Secondary: None
+[21] Bethlehem Cemetery Veterans Memorial
+  Primary: Colonial/settler | Secondary: None
+[22] Bethlehem United Church of Christ
+  Primary: Colonial/settler | Secondary: None
+[23] Brown and Fuller's Addition—1832
+  Primary: Colonial/settler | Secondary: None
+[24] Building New Around Old: The Construction of the Present Courthouse
+  Primary: Colonial/settler | Secondary: None
+[25] Business and Banking
+  Primary: Colonial/settler | Secondary: None
+[26] Campus Patterns of Residential Life
+  Primary: Colonial/settler | Secondary: None
+[27] Carnegie Library
+  Primary: Colonial/settler | Secondary: None
+[28] Carriage House
+  Primary: Colonial/settler | Secondary: None
+[29] The Center of Power And Transportation
+  Primary: Colonial/settler | Secondary: None
+[30] Centers for Communications on Courthouse Square
+  Primary: Colonial/settler | Secondary: None
+[31] The Central Forty and The Diag 1837
+  Primary: Colonial/settler | Secondary: None
+[32] Central Title Service Building
+  Primary: Colonial/settler | Secondary: None
+[33] The Changing Face of North Fourth Avenue
+  Primary: Colonial/settler | Secondary: None
+[34] Changing Retail Patterns
+  Primary: Colonial/settler | Secondary: None
+[35] Charles Fox
+  Primary: Colonial/settler | Secondary: None
+[36] Cider Mill 1887
+  Primary: Colonial/settler | Secondary: None
+[37] The Civil War and Lower Town
+  Primary: Colonial/settler | Secondary: African Americans/Enslaved/Freed Blacks/etc.
+[38] The Clairvoyant Physician: Dr. Daniel Kellogg's Building, 1874 and 1920s
+  Primary: Colonial/settler | Secondary: None
+[39] Commerce on the "Ann Street Block"
+  Primary: Colonial/settler | Secondary: African Americans/Enslaved/Freed Blacks/etc.
+[40] Connecting With Nature
+  Primary: Colonial/settler | Secondary: None
+[41] A Corner Landmark on Huron and North Fourth
+  Primary: Colonial/settler | Secondary: None
+[42] The Corners of South University and East University Avenues
+  Primary: Colonial/settler | Secondary: None
+[43] Courthouse Square: A Center of Civic Life
+  Primary: Colonial/settler | Secondary: None
+[44] David McCollum's House
+  Primary: Colonial/settler | Secondary: None
+[45] The David R. Byrd Center 
+Pittsfield Township, Michigan
+  Primary: Colonial/settler | Secondary: African Americans/Enslaved/Freed Blacks/etc.
+[46] Delhi Bridge
+  Primary: Colonial/settler | Secondary: None
+[47] Delta Sigma Delta
+  Primary: Colonial/settler | Secondary: None
+[48] Delta Upsilon Fraternity 
+
+  Primary: Colonial/settler | Secondary: None
+[49] The Denison Archway
+  Primary: Colonial/settler | Secondary: None
+[50] Departing Heroes and the Home Front
+  Primary: Colonial/settler | Secondary: None
+[51] The Detroit Observatory 
+1854
+  Primary: Colonial/settler | Secondary: None
+[52] Dixboro United Methodist Church
+  Primary: Colonial/settler | Secondary: None
+[53] Douglass Houghton
+  Primary: Colonial/settler | Secondary: None
+[54] Downtown Movie Theaters
+  Primary: Colonial/settler | Secondary: None
+[55] Dry Goods
+  Primary: Colonial/settler | Secondary: None
+[56] Earhart Manor
+  Primary: Colonial/settler | Secondary: None
+[57] Early Power and Transportation
+  Primary: Colonial/settler | Secondary: None
+[58] An Early Township Blacksmith:Philo Alanson Pritchard (1803-1853)
+  Primary: Colonial/settler | Secondary: None
+[59] East University Avenue Campus Boundary 1837
+  Primary: Colonial/settler | Secondary: None
+[60] Eating and Drinking in Ann Arbor
+  Primary: Colonial/settler | Secondary: None
+[61] Engineering at Michigan 1854-2004
+  Primary: Colonial/settler | Secondary: None
+[62] Essential City Services
+  Primary: Colonial/settler | Secondary: None
+[63] Everyone Loves a Parade
+  Primary: Colonial/settler | Secondary: None
+[64] First Medical Buildings 1850-1925
+  Primary: Colonial/settler | Secondary: None
+[65] First National Building 1929
+  Primary: Colonial/settler | Secondary: None
+[66] First Presbyterian Church Cornerstone
+  Primary: Colonial/settler | Secondary: None
+[67] First University Hospital 1869
+  Primary: Colonial/settler | Secondary: None
+[68] Forest Hill
+  Primary: Colonial/settler | Secondary: None
+[69] A Former Bank and Estate on Ann Street
+  Primary: Colonial/settler | Secondary: None
+[70] Four World Records: Jesse Owens
+  Primary: African American/Enslaved/Freed Blacks | Secondary: None
+[71] From Horses to Cars: Early Autos, Service and Parts
+  Primary: Colonial/settler | Secondary: None
+[72] From Industry to Parks
+  Primary: Colonial/settler | Secondary: None
+[73] From Interurbans to Buses
+  Primary: Colonial/settler | Secondary: None
+[74] From Liveries to Taxis
+  Primary: Colonial/settler | Secondary: None
+[75] Frontier Cozy
+  Primary: Colonial/settler | Secondary: None
+[76] FUMC's BSA Troop 4: Michigan Centennial Organization
+  Primary: Colonial/settler | Secondary: None
+[77] Geddesburg
+  Primary: Colonial/settler | Secondary: None
+[78] Germans in Ann Arbor
+  Primary: Colonial/settler | Secondary: None
+[79] Germans on Ashley Street
+  Primary: Colonial/settler | Secondary: None
+[80] Governor Alpheus Felch
+  Primary: Colonial/settler | Secondary: None
+[81] Grist Mill 1873
+  Primary: Colonial/settler | Secondary: None
+[82] The Gristmill
+  Primary: Colonial/settler | Secondary: None
+[83] The Growth of City Services
+  Primary: Colonial/settler | Secondary: None
+[84] Hardware
+  Primary: Colonial/settler | Secondary: None
+[85] Harris Hall
+  Primary: Colonial/settler | Secondary: None
+[86] Hill Auditorium
+  Primary: Colonial/settler | Secondary: None
+[87] Hog House
+  Primary: Colonial/settler | Secondary: None
+[88] Homes of Early Lower Town Settlers
+  Primary: Colonial/settler | Secondary: None
+[89] Hospitality on Courthouse Square
+  Primary: Colonial/settler | Secondary: None
+[90] How it Happened
+  Primary: Colonial/settler | Secondary: None
+[91] Hoyt Garrod Post and Family History
+  Primary: Colonial/settler | Secondary: None
+[92] Ice house
+  Primary: Colonial/settler | Secondary: None
+[93] Ideation Building 1983
+  Primary: Colonial/settler | Secondary: None
+[94] In memory of all Veterans
+  Primary: Colonial/settler | Secondary: None
+[95] Indian Trails, Roads, and Trains
+  Primary: Indigenous | Secondary: Colonial/settler
+[96] Industry and Recreation on Allen Creek
+  Primary: Colonial/settler | Secondary: None
+[97] The James Foster House of Art
+  Primary: Colonial/settler | Secondary: None
+[98] John F. Kennedy Defines the Peace Corps
+  Primary: Colonial/settler | Secondary: None
+[99] The Jonathan and Almy Lund House
+  Primary: Colonial/settler | Secondary: None
+[100] Joseph Whiting
+  Primary: Colonial/settler | Secondary: None
+
+=== Primary distribution ===
+  Colonial/settler: 97
+  Misc.: 2
+  African American/Enslaved/Freed Blacks: 1
+  Indigenous: 1
+
+=== Secondary distribution ===
+  African Americans/Enslaved/Freed Blacks/etc.: 5
+  Foriegn nation: 1
+  Colonial/settler: 1

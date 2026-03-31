@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann Arbor Heritage Map</title>
+    <meta name="description" content="Interactive heritage address map of Ann Arbor, Michigan">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+
+    <!-- Google Fonts — vintage/historical feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== Reset & Base ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Crimson Text', 'Georgia', serif;
+            background: #2c1e0f;
+            color: #3e2a14;
+            overflow: hidden;
+        }
+
+        /* ========== Layout ========== */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* ========== Header — parchment ribbon ========== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 28px;
+            background: linear-gradient(180deg, #e8d5b0 0%, #d4bc8b 40%, #c9ad78 100%);
+            border-bottom: 3px solid #8b6d3f;
+            box-shadow:
+                0 2px 8px rgba(60, 40, 10, 0.35),
+                inset 0 1px 0 rgba(255, 245, 220, 0.5),
+                inset 0 -1px 0 rgba(100, 70, 30, 0.2);
+            z-index: 1000;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        /* aged paper texture overlay via CSS */
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(139,109,63,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 30%, rgba(139,109,63,0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(circle, #8b6914 0%, #5a3e0a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #f5e6c4;
+            font-family: 'IM Fell English SC', serif;
+            border: 2px solid #a07830;
+            box-shadow:
+                0 2px 6px rgba(60, 40, 10, 0.4),
+                inset 0 1px 2px rgba(255, 220, 150, 0.3);
+        }
+
+        .header-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #3e2a14;
+            letter-spacing: 1.5px;
+            text-shadow: 0 1px 0 rgba(255, 245, 220, 0.4);
+        }
+
+        .header-subtitle {
+            font-family: 'Crimson Text', serif;
+            font-size: 12px;
+            font-style: italic;
+            color: #7a5c32;
+            margin-top: 1px;
+            letter-spacing: 0.8px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1;
+        }
+
+        .coord-badge {
+            background: rgba(62, 42, 20, 0.08);
+            border: 1px solid rgba(139, 109, 63, 0.35);
+            border-radius: 4px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #5a3e1e;
+            font-family: 'Crimson Text', serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== Decorative divider lines ========== */
+        .header-ornament {
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg, transparent 0%, #8b6914 20%, #c9a84c 50%, #8b6914 80%, transparent 100%);
+            border-radius: 3px;
+        }
+
+        /* ========== Map Container ========== */
+        .map-wrapper {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            /* aged border effect */
+            border: 4px solid #8b6d3f;
+            border-top: none;
+            box-shadow: inset 0 0 40px rgba(60, 40, 10, 0.25);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Vignette overlay on the map */
+        .map-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 500;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at center, transparent 55%, rgba(44, 30, 15, 0.35) 100%);
+        }
+
+        /* ========== Leaflet Overrides — vintage style ========== */
+        .leaflet-control-zoom {
+            border: 2px solid #8b6d3f !important;
+            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3) !important;
+            border-radius: 4px !important;
+            overflow: hidden;
+        }
+
+        .leaflet-control-zoom a {
+            background: linear-gradient(180deg, #e8d5b0, #d4bc8b) !important;
+            color: #3e2a14 !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(139, 109, 63, 0.4) !important;
+            width: 32px !important;
+            height: 32px !important;
+            line-height: 32px !important;
+            font-size: 16px !important;
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 700 !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .leaflet-control-zoom a:hover {
+            background: linear-gradient(180deg, #f0e0c0, #e0c890) !important;
+            color: #2a1a08 !important;
+        }
+
+        .leaflet-control-zoom a:last-child {
+            border-bottom: none !important;
+        }
+
+        /* Scale bar — vintage */
+        .leaflet-control-scale-line {
+            background: rgba(232, 213, 176, 0.9) !important;
+            border-color: #8b6d3f !important;
+            color: #3e2a14 !important;
+            font-family: 'Crimson Text', serif !important;
+            font-size: 11px !important;
+            padding: 2px 8px !important;
+            border-radius: 2px !important;
+            box-shadow: 0 1px 4px rgba(60, 40, 10, 0.25) !important;
+        }
+
+        /* Attribution */
+        .leaflet-control-attribution {
+            background: rgba(232, 213, 176, 0.85) !important;
+            color: #7a5c32 !important;
+            font-size: 10px !important;
+            font-family: 'Crimson Text', serif !important;
+            padding: 2px 8px !important;
+        }
+
+        .leaflet-control-attribution a {
+            color: #8b5a00 !important;
+        }
+
+        /* ========== Compass Rose — ornate vintage ========== */
+        .compass-control {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 800;
+            width: 80px;
+            height: 80px;
+            pointer-events: none;
+        }
+
+        .compass-rose {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 2px 6px rgba(60, 40, 10, 0.45));
+        }
+
+        /* ========== Map Info Panel — parchment card ========== */
+        .map-info-panel {
+            position: absolute;
+            bottom: 36px;
+            left: 16px;
+            z-index: 800;
+            background: linear-gradient(145deg, #e8d5b0 0%, #dcc49a 50%, #d4bc8b 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 6px;
+            padding: 12px 16px;
+            min-width: 180px;
+            box-shadow:
+                0 3px 12px rgba(60, 40, 10, 0.3),
+                inset 0 1px 0 rgba(255, 245, 220, 0.4);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #5a3e1e;
+            margin-bottom: 5px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #7a5c32;
+            min-width: 56px;
+            font-style: italic;
+        }
+
+        .info-value {
+            color: #3e2a14;
+            font-weight: 600;
+        }
+
+        /* ========== Title cartouche on map ========== */
+        .map-cartouche {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 800;
+            background: linear-gradient(180deg, rgba(232,213,176,0.95) 0%, rgba(212,188,139,0.95) 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 8px;
+            padding: 8px 24px;
+            text-align: center;
+            box-shadow:
+                0 3px 12px rgba(60, 40, 10, 0.3),
+                inset 0 1px 0 rgba(255, 245, 220, 0.5);
+            pointer-events: none;
+        }
+
+        .cartouche-title {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 14px;
+            color: #3e2a14;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cartouche-year {
+            font-family: 'Crimson Text', serif;
+            font-size: 11px;
+            color: #7a5c32;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        /* ========== Heritage Marker Pins ========== */
+        .heritage-marker {
+            background: none !important;
+            border: none !important;
+        }
+
+        @keyframes taubmanPulse {
+            0%, 100% { box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 2px rgba(196,18,48,0.3); }
+            50% { box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 6px rgba(196,18,48,0.15); }
+        }
+
+        .heritage-marker div:hover {
+            transform: scale(1.25);
+            z-index: 9999 !important;
+        }
+
+        .vintage-popup .leaflet-popup-content-wrapper {
+            background: linear-gradient(145deg, #e8d5b0 0%, #d4bc8b 100%) !important;
+            border: 2px solid #8b6d3f !important;
+            border-radius: 6px !important;
+            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3) !important;
+            color: #3e2a14 !important;
+        }
+
+        .vintage-popup .leaflet-popup-tip {
+            background: #d4bc8b !important;
+            border: 1px solid #8b6d3f !important;
+        }
+
+        /* ========== Layer Control — vintage ========== */
+        .leaflet-control-layers {
+            background: linear-gradient(145deg, #e8d5b0, #d4bc8b) !important;
+            border: 2px solid #8b6d3f !important;
+            border-radius: 6px !important;
+            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3) !important;
+            font-family: 'Crimson Text', serif !important;
+            color: #3e2a14 !important;
+            margin-right: 180px !important;
+        }
+
+        .leaflet-control-layers-toggle {
+            background-color: transparent !important;
+            width: 34px !important;
+            height: 34px !important;
+        }
+
+        .leaflet-control-layers label {
+            font-family: 'Crimson Text', serif !important;
+            font-size: 13px !important;
+            color: #3e2a14 !important;
+        }
+
+        .leaflet-control-layers-separator {
+            border-color: rgba(139, 109, 63, 0.3) !important;
+        }
+
+        /* ========== Legend Panel ========== */
+        .legend-toggle {
+            position: absolute;
+            top: 140px;
+            left: 16px;
+            z-index: 900;
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
+            border: 2px solid #8b6d3f;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: 'Crimson Text', serif;
+            font-size: 16px;
+            color: #3e2a14;
+            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .legend-toggle:hover {
+            background: linear-gradient(180deg, #f0e0c0, #e0c890);
+        }
+
+        .legend-panel {
+            position: absolute;
+            top: 140px;
+            left: 16px;
+            z-index: 899;
+            background: linear-gradient(145deg, #e8d5b0 0%, #dcc49a 50%, #d4bc8b 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 6px;
+            padding: 14px 16px;
+            min-width: 200px;
+            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
+            transform: translateX(-120%);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.25s ease;
+            pointer-events: none;
+        }
+
+        .legend-panel.open {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .legend-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #3e2a14;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(139, 109, 63, 0.35);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-family: 'Crimson Text', serif;
+            font-size: 13px;
+            color: #3e2a14;
+        }
+
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-item.disabled {
+            opacity: 0.35;
+        }
+
+        .legend-item.disabled .legend-label {
+            text-decoration: line-through;
+        }
+
+        .legend-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid #f5e6c4;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: 700;
+            color: #f5e6c4;
+        }
+
+        .legend-label {
+            flex: 1;
+        }
+
+        .legend-count {
+            font-size: 11px;
+            color: #7a5c32;
+            font-style: italic;
+        }
+
+        /* ========== Timeline Slider ========== */
+        .timeline-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 24px;
+            background: linear-gradient(180deg, #d4bc8b 0%, #c9ad78 50%, #bfa26a 100%);
+            border-top: 3px solid #8b6d3f;
+            box-shadow: inset 0 1px 0 rgba(255, 245, 220, 0.4);
+            flex-shrink: 0;
+        }
+
+        .timeline-label {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 12px;
+            color: #3e2a14;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .timeline-slider-wrap {
+            flex: 1;
+            position: relative;
+        }
+
+        .timeline-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #8b6914 0%, #c9a84c 50%, #8b6914 100%);
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid rgba(139, 109, 63, 0.5);
+            cursor: pointer;
+        }
+
+        .timeline-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #f5e6c4 30%, #c9a84c 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 50%;
+            cursor: grab;
+            box-shadow: 0 2px 6px rgba(60, 40, 10, 0.4);
+        }
+
+        .timeline-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #f5e6c4 30%, #c9a84c 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 50%;
+            cursor: grab;
+            box-shadow: 0 2px 6px rgba(60, 40, 10, 0.4);
+        }
+
+        .timeline-ticks {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0 0;
+            font-family: 'Crimson Text', serif;
+            font-size: 10px;
+            color: #7a5c32;
+            font-style: italic;
+        }
+
+        .timeline-year-badge {
+            background: rgba(62, 42, 20, 0.12);
+            border: 1px solid rgba(139, 109, 63, 0.4);
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #3e2a14;
+            min-width: 60px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .timeline-count {
+            font-family: 'Crimson Text', serif;
+            font-size: 12px;
+            color: #5a3e1e;
+            white-space: nowrap;
+            font-style: italic;
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 600px) {
+            .header {
+                padding: 8px 14px;
+            }
+            .header-title {
+                font-size: 16px;
+            }
+            .header-subtitle, .header-ornament {
+                display: none;
+            }
+            .coord-badge {
+                display: none;
+            }
+            .compass-control {
+                width: 72px;
+                height: 72px;
+            }
+            .map-cartouche {
+                padding: 6px 14px;
+            }
+            .cartouche-title {
+                font-size: 11px;
+            }
+            .map-info-panel {
+                bottom: 28px;
+                left: 10px;
+                padding: 8px 12px;
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-icon">A²</div>
+            <div>
+                <div class="header-title">Ann Arbor Heritage Map</div>
+
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="coord-badge" id="cursorCoord">42.2808° N, 83.7430° W</div>
+        </div>
+        <div class="header-ornament"></div>
+    </header>
+
+    <!-- Map Area -->
+    <div class="map-wrapper">
+        <div id="map"></div>
+
+        <!-- Vignette overlay -->
+        <div class="map-vignette"></div>
+
+        <!-- Cartouche / title panel on map -->
+        <div class="map-cartouche">
+            <div class="cartouche-title">City of Ann Arbor</div>
+            <div class="cartouche-year">Washtenaw County, Michigan</div>
+        </div>
+
+        <!-- Compass Rose — ornate vintage SVG -->
+        <div class="compass-control">
+            <svg class="compass-rose" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer decorative rings -->
+                <circle cx="100" cy="100" r="94" fill="none" stroke="#8b6d3f" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="100" cy="100" r="88" fill="none" stroke="#a07830" stroke-width="0.5" opacity="0.3"/>
+
+                <!-- Background circle -->
+                <circle cx="100" cy="100" r="85" fill="rgba(232,213,176,0.88)" stroke="#8b6d3f" stroke-width="1.5"/>
+
+                <!-- Tick marks around ring -->
+                <g stroke="#8b6d3f" stroke-width="1" opacity="0.4">
+                    <line x1="100" y1="18" x2="100" y2="25"/>
+                    <line x1="100" y1="175" x2="100" y2="182"/>
+                    <line x1="18" y1="100" x2="25" y2="100"/>
+                    <line x1="175" y1="100" x2="182" y2="100"/>
+                    <!-- diagonal ticks -->
+                    <line x1="42" y1="42" x2="47" y2="47"/>
+                    <line x1="158" y1="42" x2="153" y2="47"/>
+                    <line x1="42" y1="158" x2="47" y2="153"/>
+                    <line x1="158" y1="158" x2="153" y2="153"/>
+                </g>
+
+                <!-- Inner decorative circle -->
+                <circle cx="100" cy="100" r="65" fill="none" stroke="#a07830" stroke-width="0.5" opacity="0.35"/>
+
+                <!-- Secondary direction points (NE, NW, SE, SW) — thin -->
+                <polygon points="100,38 104,80 100,72 96,80" fill="#8b6d3f" opacity="0.3"/>
+                <polygon points="100,162 104,120 100,128 96,120" fill="#8b6d3f" opacity="0.3"/>
+                <polygon points="162,100 120,104 128,100 120,96" fill="#8b6d3f" opacity="0.3"/>
+                <polygon points="38,100 80,104 72,100 80,96" fill="#8b6d3f" opacity="0.3"/>
+
+                <!-- N pointer — ornate, dark red/gold -->
+                <polygon points="100,22 112,82 100,65 88,82" fill="#8b1a1a" opacity="0.9"/>
+                <polygon points="100,22 100,65 88,82" fill="#a02020" opacity="0.7"/>
+
+                <!-- S pointer — muted gold -->
+                <polygon points="100,178 112,118 100,135 88,118" fill="#7a5c32" opacity="0.5"/>
+                <polygon points="100,178 100,135 88,118" fill="#6b4e28" opacity="0.35"/>
+
+                <!-- E pointer -->
+                <polygon points="178,100 118,112 135,100 118,88" fill="#7a5c32" opacity="0.4"/>
+                <polygon points="178,100 135,100 118,88" fill="#6b4e28" opacity="0.25"/>
+
+                <!-- W pointer -->
+                <polygon points="22,100 82,112 65,100 82,88" fill="#7a5c32" opacity="0.4"/>
+                <polygon points="22,100 65,100 82,88" fill="#6b4e28" opacity="0.25"/>
+
+                <!-- Center ornament -->
+                <circle cx="100" cy="100" r="10" fill="#e8d5b0" stroke="#8b6d3f" stroke-width="1.5"/>
+                <circle cx="100" cy="100" r="4" fill="#8b6914"/>
+
+                <!-- Fleur-de-lis style N marker -->
+                <text x="100" y="16" text-anchor="middle" fill="#8b1a1a" font-family="'IM Fell English SC', serif" font-size="16" font-weight="400">N</text>
+                <text x="100" y="198" text-anchor="middle" fill="#7a5c32" font-family="'IM Fell English SC', serif" font-size="12">S</text>
+                <text x="196" y="104" text-anchor="end" fill="#7a5c32" font-family="'IM Fell English SC', serif" font-size="12">E</text>
+                <text x="4" y="104" text-anchor="start" fill="#7a5c32" font-family="'IM Fell English SC', serif" font-size="12">W</text>
+
+                <!-- Small diagonal labels -->
+                <text x="152" y="52" text-anchor="middle" fill="#a07830" font-family="'Crimson Text', serif" font-size="8" opacity="0.6">NE</text>
+                <text x="48" y="52" text-anchor="middle" fill="#a07830" font-family="'Crimson Text', serif" font-size="8" opacity="0.6">NW</text>
+                <text x="152" y="156" text-anchor="middle" fill="#a07830" font-family="'Crimson Text', serif" font-size="8" opacity="0.6">SE</text>
+                <text x="48" y="156" text-anchor="middle" fill="#a07830" font-family="'Crimson Text', serif" font-size="8" opacity="0.6">SW</text>
+            </svg>
+        </div>
+
+        <!-- Legend Toggle Button -->
+        <div class="legend-toggle" id="legendToggle" title="Toggle Legend">☰</div>
+
+        <!-- Legend Panel -->
+        <div class="legend-panel" id="legendPanel">
+            <div class="legend-title">LEGEND</div>
+            <div class="legend-item" data-category="Colonial/settler" style="cursor:pointer;">
+                <div class="legend-dot" style="background:#8b6914;">n</div>
+                <span class="legend-label">Colonial / Settler</span>
+                <span class="legend-count" id="countColonial"></span>
+            </div>
+            <div class="legend-item" data-category="Indigenous" style="cursor:pointer;">
+                <div class="legend-dot" style="background:#b84c28;">n</div>
+                <span class="legend-label">Indigenous</span>
+                <span class="legend-count" id="countIndigenous"></span>
+            </div>
+            <div class="legend-item" data-category="African American/Enslaved/Freed Blacks" style="cursor:pointer;">
+                <div class="legend-dot" style="background:#5a0f8a;">n</div>
+                <span class="legend-label">African American</span>
+                <span class="legend-count" id="countAA"></span>
+            </div>
+            <div class="legend-item" data-category="Misc." style="cursor:pointer;">
+                <div class="legend-dot" style="background:#2a7a4c;">n</div>
+                <span class="legend-label">Misc.</span>
+                <span class="legend-count" id="countMisc"></span>
+            </div>
+        </div>
+
+        <!-- Info Panel — parchment card -->
+        <div class="map-info-panel">
+            <div class="info-row">
+                <span class="info-label">Zoom</span>
+                <span class="info-value" id="zoomLevel">14</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Center</span>
+                <span class="info-value" id="centerCoord">42.281, -83.743</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Slider -->
+    <div class="timeline-bar">
+        <span class="timeline-label">TIMELINE</span>
+        <div class="timeline-slider-wrap">
+            <input type="range" class="timeline-slider" id="timelineSlider" min="1899" max="2024" value="2024" step="1">
+            <div class="timeline-ticks">
+                <span>1899</span><span>1920</span><span>1940</span><span>1960</span><span>1980</span><span>2000</span><span>2024</span>
+            </div>
+        </div>
+        <div class="timeline-year-badge" id="timelineYear">≤ 2024</div>
+        <div class="timeline-count" id="timelineCount"></div>
+    </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+<script>
+    // ========== Initialize Map ==========
+    const map = L.map('map', {
+        center: [42.2808, -83.7430],
+        zoom: 14,
+        zoomControl: true,
+        attributionControl: true,
+        minZoom: 10,
+        maxZoom: 19
+    });
+
+    // ========== Base Layers ==========
+    // 1. Vintage Watercolor (original style)
+    const watercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
+        attribution: '&copy; <a href="https://stamen.com">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 20
+    });
+    const watercolorLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.png', {
+        attribution: '', maxZoom: 20, opacity: 0.45
+    });
+    const vintageLayer = L.layerGroup([watercolor, watercolorLabels]).addTo(map);
+
+    // 2. Standard Street Map (OpenStreetMap)
+    const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    });
+
+    // 3. Satellite / 3D (Google Maps Satellite)
+    const satelliteLayer = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        attribution: '&copy; Google Maps',
+        maxZoom: 20
+    });
+
+    // 4. Hybrid (Satellite + Labels)
+    const hybridBase = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        attribution: '&copy; Google Maps', maxZoom: 20
+    });
+    const hybridLabels = L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
+        attribution: '', maxZoom: 20
+    });
+    const hybridLayer = L.layerGroup([hybridBase, hybridLabels]);
+
+    // Layer Control
+    const baseLayers = {
+        '🗺️ Vintage': vintageLayer,
+        '🗺️ Street Map': streetLayer,
+        '🛰️ Satellite': satelliteLayer,
+        '🛰️ Hybrid': hybridLayer
+    };
+    L.control.layers(baseLayers, null, { position: 'topright', collapsed: true }).addTo(map);
+
+    // ========== Scale Control ==========
+    L.control.scale({
+        position: 'bottomright',
+        imperial: true,
+        metric: true,
+        maxWidth: 200
+    }).addTo(map);
+
+    // ========== Update UI on map events ==========
+    const zoomLevelEl = document.getElementById('zoomLevel');
+    const centerCoordEl = document.getElementById('centerCoord');
+    const cursorCoordEl = document.getElementById('cursorCoord');
+
+    function updateMapInfo() {
+        const z = map.getZoom();
+        const c = map.getCenter();
+        zoomLevelEl.textContent = z;
+        centerCoordEl.textContent = c.lat.toFixed(3) + ', ' + c.lng.toFixed(3);
+    }
+
+    map.on('zoomend', updateMapInfo);
+    map.on('moveend', updateMapInfo);
+
+    map.on('mousemove', function (e) {
+        const lat = e.latlng.lat.toFixed(4);
+        const lng = Math.abs(e.latlng.lng).toFixed(4);
+        const ns = e.latlng.lat >= 0 ? 'N' : 'S';
+        const ew = e.latlng.lng >= 0 ? 'E' : 'W';
+        cursorCoordEl.textContent = lat + '° ' + ns + ', ' + lng + '° ' + ew;
+    });
+
+    updateMapInfo();
+
+    // ========== Ann Arbor City Boundary — vintage style ==========
+    fetch('ann_arbor_boundary.json')
+        .then(res => res.json())
+        .then(geojson => {
+            L.geoJSON(geojson, {
+                style: { color: 'rgba(255, 120, 0, 0.25)', weight: 12, fill: false, lineCap: 'round', lineJoin: 'round' }
+            }).addTo(map);
+            L.geoJSON(geojson, {
+                style: { color: '#e63900', weight: 3, opacity: 0.85, fillColor: 'rgba(230, 57, 0, 0.06)', fillOpacity: 1, dashArray: '10, 5', lineCap: 'round', lineJoin: 'round' }
+            }).addTo(map);
+            L.geoJSON(geojson, {
+                style: { color: 'rgba(255, 255, 255, 0.4)', weight: 1, fill: false, dashArray: '4, 6', lineCap: 'round', lineJoin: 'round' }
+            }).addTo(map);
+        })
+        .catch(err => console.warn('Could not load boundary:', err));
+
+    // ========== Taubman College — special landmark ==========
+    const taubmanIcon = L.divIcon({
+        className: 'heritage-marker',
+        html: `<div style="
+            background: #c41230;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid #ffd700;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 2px rgba(196,18,48,0.3);
+            cursor: pointer;
+            animation: taubmanPulse 2s ease-in-out infinite;
+        ">★</div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15],
+        popupAnchor: [0, -19]
+    });
+    const taubmanMarker = L.marker([42.29245, -83.71615], { icon: taubmanIcon, zIndexOffset: 1000 }).addTo(map);
+    taubmanMarker.bindPopup(
+        `<div style="font-family:'Crimson Text',serif;min-width:180px;">
+            <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#c41230;margin-bottom:4px;">
+                ★ Taubman College
+            </div>
+            <div style="font-size:12px;color:#3e2a14;">
+                College of Architecture &amp; Urban Planning
+            </div>
+            <div style="font-size:11px;color:#7a5c32;margin-top:3px;">
+                2000 Bonisteel Blvd, Ann Arbor, MI
+            </div>
+        </div>`,
+        { maxWidth: 280, className: 'vintage-popup' }
+    );
+
+    // ========== Heritage Markers ==========
+    function getMarkerColor(primary) {
+        const colors = {
+            'Colonial/settler': '#8b6914',
+            'Indigenous': '#b84c28',
+            'African American/Enslaved/Freed Blacks': '#5a0f8a',
+            'Misc.': '#2a7a4c'
+        };
+        return colors[primary] || '#8b6914';
+    }
+
+    function createNumberedIcon(id, color) {
+        const size = id.toString().length <= 2 ? 24 : 28;
+        const fontSize = id.toString().length <= 2 ? 11 : 9;
+        return L.divIcon({
+            className: 'heritage-marker',
+            html: `<div style="
+                background: ${color};
+                color: #f5e6c4;
+                width: ${size}px;
+                height: ${size}px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Crimson Text', serif;
+                font-size: ${fontSize}px;
+                font-weight: 700;
+                border: 2px solid #f5e6c4;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.15);
+                cursor: pointer;
+                transition: transform 0.15s ease;
+            ">${id}</div>`,
+            iconSize: [size, size],
+            iconAnchor: [size/2, size/2],
+            popupAnchor: [0, -size/2 - 4]
+        });
+    }
+
+    // Store marker layers for timeline filtering
+    const markerLayers = []; // { leafletMarker, year, data }
+
+    fetch('markers.json')
+        .then(res => res.json())
+        .then(markers => {
+            const counts = { 'Colonial/settler': 0, 'Indigenous': 0, 'African American/Enslaved/Freed Blacks': 0, 'Misc.': 0 };
+            markers.forEach(m => {
+                const color = getMarkerColor(m.primary);
+                const icon = createNumberedIcon(m.id, color);
+                const leafletMarker = L.marker([m.lat, m.lng], { icon: icon }).addTo(map);
+                const secLine = m.secondary ? `<div style="font-size:11px;color:#7a5c32;margin-top:2px;">${m.secondary}</div>` : '';
+                const yearLine = m.year ? `<div style="font-size:11px;color:#7a5c32;margin-top:2px;">Erected: ${m.year}</div>` : '';
+                leafletMarker.bindPopup(
+                    `<div style="font-family:'Crimson Text',serif;min-width:160px;">
+                        <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#3e2a14;margin-bottom:4px;">
+                            #${m.id} — ${m.title}
+                        </div>
+                        <div style="font-size:12px;color:#5a3e1e;padding:3px 6px;background:rgba(139,109,63,0.12);border-radius:3px;display:inline-block;">
+                            ${m.primary}
+                        </div>
+                        ${secLine}${yearLine}
+                    </div>`,
+                    { maxWidth: 280, className: 'vintage-popup' }
+                );
+                markerLayers.push({ leafletMarker, year: m.year, data: m });
+                if (counts.hasOwnProperty(m.primary)) counts[m.primary]++;
+                else counts['Colonial/settler']++;
+            });
+            document.getElementById('countColonial').textContent = counts['Colonial/settler'];
+            document.getElementById('countIndigenous').textContent = counts['Indigenous'];
+            document.getElementById('countAA').textContent = counts['African American/Enslaved/Freed Blacks'];
+            document.getElementById('countMisc').textContent = counts['Misc.'];
+            // Initialize timeline count
+            updateMarkerVisibility();
+            console.log('Loaded ' + markers.length + ' heritage markers');
+        })
+        .catch(err => console.warn('Could not load markers:', err));
+
+    // ========== Legend Toggle ==========
+    const legendToggle = document.getElementById('legendToggle');
+    const legendPanel = document.getElementById('legendPanel');
+    let legendOpen = false;
+
+    legendToggle.addEventListener('click', function() {
+        legendOpen = !legendOpen;
+        if (legendOpen) {
+            legendPanel.classList.add('open');
+            legendToggle.style.left = '230px';
+            legendToggle.innerHTML = '✕';
+        } else {
+            legendPanel.classList.remove('open');
+            legendToggle.style.left = '16px';
+            legendToggle.innerHTML = '☰';
+        }
+    });
+
+    // ========== Category Toggle ==========
+    const hiddenCategories = new Set();
+
+    document.querySelectorAll('.legend-item[data-category]').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const cat = this.dataset.category;
+            if (hiddenCategories.has(cat)) {
+                hiddenCategories.delete(cat);
+                this.classList.remove('disabled');
+            } else {
+                hiddenCategories.add(cat);
+                this.classList.add('disabled');
+            }
+            updateMarkerVisibility();
+        });
+    });
+
+    // ========== Timeline Slider ==========
+    const timelineSlider = document.getElementById('timelineSlider');
+    const timelineYearEl = document.getElementById('timelineYear');
+    const timelineCountEl = document.getElementById('timelineCount');
+
+    function updateMarkerVisibility() {
+        const year = parseInt(timelineSlider.value);
+        let shown = 0;
+        markerLayers.forEach(({ leafletMarker, year: mYear, data }) => {
+            const categoryVisible = !hiddenCategories.has(data.primary);
+            const timeVisible = (mYear === null || mYear === undefined || mYear <= year);
+            if (categoryVisible && timeVisible) {
+                if (!map.hasLayer(leafletMarker)) map.addLayer(leafletMarker);
+                shown++;
+            } else {
+                if (map.hasLayer(leafletMarker)) map.removeLayer(leafletMarker);
+            }
+        });
+        timelineYearEl.textContent = '≤ ' + year;
+        const withYear = markerLayers.filter(m => m.year !== null && m.year !== undefined);
+        const shownWithYear = withYear.filter(m => m.year <= year && !hiddenCategories.has(m.data.primary)).length;
+        timelineCountEl.textContent = shownWithYear + '/' + withYear.length + ' dated';
+    }
+
+    timelineSlider.addEventListener('input', function() {
+        updateMarkerVisibility();
+    });
+</script>
+
+</body>
+</html>

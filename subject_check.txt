@@ -1,0 +1,384 @@
+[101] Kempf House
+  Primary: Colonial/settler
+  Secondary: None
+
+[102] A Landmark of Civic Pride on Courthouse Square
+  Primary: Colonial/settler
+  Secondary: None
+
+[103] Landscape Transformed
+  Primary: Colonial/settler
+  Secondary: None
+
+[104] The Last Deposit
+  Primary: Colonial/settler
+  Secondary: None
+
+[105] Law Quadrangle
+  Primary: Colonial/settler
+  Secondary: None
+
+[106] LeClair Barn
+  Primary: Colonial/settler
+  Secondary: None
+
+[107] Log Cabin
+  Primary: Colonial/settler
+  Secondary: None
+
+[108] Lower Level of the Barn
+  Primary: Colonial/settler
+  Secondary: None
+
+[109] Lower Town Parks, Recreation, and Trails
+  Primary: Colonial/settler
+  Secondary: None
+
+[110] Lower Town's Flour Mills
+  Primary: Colonial/settler
+  Secondary: None
+
+[111] Main Street in the 1890s
+  Primary: Colonial/settler
+  Secondary: None
+
+[112] Main Street Shopping Expands
+  Primary: Colonial/settler
+  Secondary: None
+
+[113] The Main Street Shopping Experience
+  Primary: Colonial/settler
+  Secondary: None
+
+[114] The Making of a Great University
+  Primary: Colonial/settler
+  Secondary: None
+
+[115] Manufacturing in Lower Town: The Ann Arbor Agricultural Works
+  Primary: Colonial/settler
+  Secondary: None
+
+[116] Martha Cook Building
+  Primary: Colonial/settler
+  Secondary: None
+
+[117] McDivitt-White Plaza
+  Primary: Colonial/settler
+  Secondary: None
+
+[118] A Meeting Place for Ann Arbor's Black Community
+  Primary: African American/Enslaved/Freed Blacks
+  Secondary: None
+
+[119] Michigan Becomes a State
+  Primary: Colonial/settler
+  Secondary: None
+
+[120] Michigan Central Railroad Depot
+  Primary: Colonial/settler
+  Secondary: None
+
+[121] Michigan Chapter of the Scabbard and Blade
+  Primary: Colonial/settler
+  Secondary: None
+
+[122] Michigan League
+  Primary: Colonial/settler
+  Secondary: None
+
+[123] Michigan Municipal League
+  Primary: Colonial/settler
+  Secondary: None
+
+[124] The Michigan Ross Bur Oak
+  Primary: Colonial/settler
+  Secondary: None
+
+[125] Michigan Summer Symposium in Theoretical Physics
+  Primary: Colonial/settler
+  Secondary: None
+
+[126] Michigan Theatre
+  Primary: Colonial/settler
+  Secondary: None
+
+[127] Michigan Union
+  Primary: Colonial/settler
+  Secondary: None
+
+[128] Michigan Union 75th Anniversary
+  Primary: Colonial/settler
+  Secondary: None
+
+[129] The Michigan Union and the Peace Corps
+  Primary: Colonial/settler
+  Secondary: None
+
+[130] Michigan Union Fifty Year History
+  Primary: Colonial/settler
+  Secondary: None
+
+[131] Michigan's First Jewish Cemetery
+  Primary: Colonial/settler
+  Secondary: None
+
+[132] Native American Trails
+  Primary: Indigenous
+  Secondary: Colonial/settler
+
+[133] New City Government, New Issues, and a New City Hall
+  Primary: Colonial/settler
+  Secondary: African Americans/Enslaved/Freed Blacks/etc.
+
+[134] Nichols Arboretum
+  Primary: Colonial/settler
+  Secondary: None
+
+[135] Oak Grove Cemetery
+  Primary: Colonial/settler
+  Secondary: None
+
+[136] Old Main Hospital (1925)
+  Primary: Colonial/settler
+  Secondary: None
+
+[137] The Parker Family & Mill
+  Primary: Colonial/settler
+  Secondary: None
+
+[138] Phi Delta Theta Fraternity House
+  Primary: Colonial/settler
+  Secondary: None
+
+[139] Pioneer Cemetery
+  Primary: Colonial/settler
+  Secondary: None
+
+[140] Politics and Processions on Courthouse Square
+  Primary: Colonial/settler
+  Secondary: None
+
+[141] Power and Transportation
+  Primary: Colonial/settler
+  Secondary: None
+
+[142] The Power of Fleming Creek
+  Primary: Colonial/settler
+  Secondary: None
+
+[143] The President's House
+  Primary: Colonial/settler
+  Secondary: None
+
+[144] The Professors' Monument
+  Primary: Colonial/settler
+  Secondary: None
+
+[145] Pump House
+  Primary: Colonial/settler
+  Secondary: None
+
+[146] Rackham School of Graduate Studies
+  Primary: Colonial/settler
+  Secondary: None
+
+[147] Redbud Grove
+  Primary: Colonial/settler
+  Secondary: None
+
+[148] Residential Life in mid-19th Century Ann Arbor
+  Primary: Colonial/settler
+  Secondary: None
+
+[149] Revolutionary War Patriot
+  Primary: Colonial/settler
+  Secondary: None
+
+[150] Riverbank Rescue
+  Primary: Colonial/settler
+  Secondary: None
+
+[151] Robert Brackett Memorial
+  Primary: Colonial/settler
+  Secondary: None
+
+[152] St. Andrew’s Episcopal Church
+  Primary: Colonial/settler
+  Secondary: None
+
+[153] St. John's Evangelical Lutheran Church
+  Primary: Colonial/settler
+  Secondary: None
+
+[154] St. Patrick's Church
+  Primary: Colonial/settler
+  Secondary: None
+
+[155] St. Patrick's Civil War Memorial
+  Primary: Colonial/settler
+  Secondary: None
+
+[156] St. Thomas the Apostle Church
+  Primary: Colonial/settler
+  Secondary: None
+
+[157] Samuel Denton
+  Primary: Colonial/settler
+  Secondary: None
+
+[158] Schools and Churches
+  Primary: Colonial/settler
+  Secondary: None
+
+[159] Schools In Lower Town
+  Primary: Colonial/settler
+  Secondary: None
+
+[160] A Second Shopping District
+  Primary: Colonial/settler
+  Secondary: None
+
+[161] Shagbark Hickory
+  Primary: Misc.
+  Secondary: None
+
+[162] Shopping on East Huron Street
+  Primary: Colonial/settler
+  Secondary: None
+
+[163] Simpson Memorial Institute
+  Primary: Colonial/settler
+  Secondary: None
+
+[164] Social and Political Change on South University
+  Primary: Colonial/settler
+  Secondary: None
+
+[165] South University and Forest Avenues
+  Primary: Colonial/settler
+  Secondary: None
+
+[166] Spanish-American War Memorial
+  Primary: Colonial/settler
+  Secondary: None
+
+[167] The Staeblers and the Germania/American Hotel
+  Primary: Colonial/settler
+  Secondary: None
+
+[168] The Streets Around Courthouse Square
+  Primary: Colonial/settler
+  Secondary: None
+
+[169] A Supply Side of Town
+  Primary: Colonial/settler
+  Secondary: None
+
+[170] Sutherland–Wilson Farm
+  Primary: Colonial/settler
+  Secondary: None
+
+[171] Tappan Hall
+  Primary: Colonial/settler
+  Secondary: None
+
+[172] Terhune Memorial Park
+  Primary: Colonial/settler
+  Secondary: None
+
+[173] Thomas Church / Saint Thomas Cemetery
+  Primary: Colonial/settler
+  Secondary: None
+
+[174] Three Generations of Metzgers on Washington Street
+  Primary: Colonial/settler
+  Secondary: None
+
+[175] Ticknor-Campbell House
+  Primary: Colonial/settler
+  Secondary: None
+
+[176] Town and Gown: Entertainment and Changing Culture
+  Primary: Colonial/settler
+  Secondary: None
+
+[177] Transportation, Electric Power, and Gas
+  Primary: Colonial/settler
+  Secondary: None
+
+[178] The Underground Railroad
+  Primary: Colonial/settler
+  Secondary: African Americans/Enslaved/Freed Blacks/etc.
+
+[179] The University Expands
+  Primary: Colonial/settler
+  Secondary: None
+
+[180] University of Michigan Campus 1907
+  Primary: Colonial/settler
+  Secondary: None
+
+[181] The University of Michigan Men's Glee Club
+  Primary: Colonial/settler
+  Secondary: None
+
+[182] Upper Level of the Barn
+  Primary: Colonial/settler
+  Secondary: None
+
+[183] Uptown Theaters
+  Primary: Colonial/settler
+  Secondary: None
+
+[184] Village of Dixboro
+  Primary: Colonial/settler
+  Secondary: None
+
+[185] Washtenaw County War Memorial
+  Primary: Colonial/settler
+  Secondary: None
+
+[186] The Washtenaw House and Lower Town Decline
+  Primary: Colonial/settler
+  Secondary: None
+
+[187] The Washtenaw House Hotel
+  Primary: Colonial/settler
+  Secondary: None
+
+[188] Weeping Japanese Cherry (Prunus subhirtella 'Pendula')
+  Primary: Colonial/settler
+  Secondary: Foriegn nation
+
+[189] Welcome to the Parker Family Mills!
+  Primary: Colonial/settler
+  Secondary: None
+
+[190] West Engineering - West Hall
+  Primary: Colonial/settler
+  Secondary: None
+
+[191] White Willow (Salix alba)
+  Primary: Colonial/settler
+  Secondary: None
+
+[192] William L. Clements Library
+  Primary: Colonial/settler
+  Secondary: None
+
+[193] Wood Shed (archival; permanently removed)
+  Primary: Colonial/settler
+  Secondary: None
+
+[194] Wood Shed
+  Primary: Colonial/settler
+  Secondary: None
+
+[195] Xi Psi Phi Fraternity (Bench Marker)
+  Primary: Colonial/settler
+  Secondary: None
+
+[196] Native American Land Gift 1817
+  Primary: Indigenous
+  Secondary: Colonial/settler
+
