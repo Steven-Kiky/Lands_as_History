@@ -782,13 +782,13 @@
     const watercolorLabels = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.png', {
         attribution: '', maxZoom: 20, opacity: 0.45
     });
-    const vintageLayer = L.layerGroup([watercolor, watercolorLabels]).addTo(map);
+    const vintageLayer = L.layerGroup([watercolor, watercolorLabels]);
 
     // 2. Standard Street Map (OpenStreetMap)
     const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
-    });
+    }).addTo(map);
 
     // 3. Satellite / 3D (Google Maps Satellite)
     const satelliteLayer = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
