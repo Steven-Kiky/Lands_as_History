@@ -1,0 +1,7 @@
+﻿marks.csv: 197 rows
+  Headers: ['\ufeffIndex', 'Title', 'Primary Subject', 'Secondary Subject', 'Inscription', 'Location', 'Date erected', 'Erected by', 'Notes', 'Count']
+marks_indexed_v3.xlsx: 197 rows
+  Headers: ['Index', 'Title', 'Primary Subject', 'Secondary Subject', 'Inscription', 'Location', 'Date erected', 'Erected by', 'Notes', 'Count']
+
+Only in CSV: 197 - ['173', '162', '38']
+Only in XLSX: 197 - ['Hardware', 'Central Title Service Building', 'Ann Arbor High School']

@@ -1762,5 +1762,14 @@
     "lat": 42.276167,
     "lng": -83.7389,
     "year": 1939
+  },
+  {
+    "id": 197,
+    "title": "Native American Land Gift 1817",
+    "primary": "Indigenous",
+    "secondary": "Colonial/settler",
+    "lat": 42.278083,
+    "lng": -83.738278,
+    "year": 2002
   }
 ]
