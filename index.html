@@ -342,9 +342,53 @@
             color: #3e2a14 !important;
         }
 
+        .vintage-popup .leaflet-popup-content {
+            margin: 12px 14px !important;
+            max-width: 340px !important;
+        }
+
         .vintage-popup .leaflet-popup-tip {
             background: #d4bc8b !important;
             border: 1px solid #8b6d3f !important;
+        }
+
+        /* ========== Popup Inscription Scroll ========== */
+        .popup-inscription {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(139, 109, 63, 0.3);
+            max-height: 180px;
+            overflow-y: auto;
+            font-family: 'Crimson Text', serif;
+            font-size: 13px;
+            line-height: 1.65;
+            color: #3e2a14;
+            text-align: justify;
+            hyphens: auto;
+            padding-right: 4px;
+        }
+
+        .popup-inscription::-webkit-scrollbar {
+            width: 5px;
+        }
+        .popup-inscription::-webkit-scrollbar-track {
+            background: rgba(139, 109, 63, 0.08);
+            border-radius: 3px;
+        }
+        .popup-inscription::-webkit-scrollbar-thumb {
+            background: rgba(139, 109, 63, 0.3);
+            border-radius: 3px;
+        }
+        .popup-inscription::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 109, 63, 0.5);
+        }
+
+        .popup-erected-by {
+            margin-top: 6px;
+            font-family: 'Crimson Text', serif;
+            font-size: 11px;
+            color: #7a5c32;
+            font-style: italic;
         }
 
         /* ========== Layer Control — vintage ========== */
@@ -1507,17 +1551,19 @@
                 const leafletMarker = L.marker([m.lat, m.lng], { icon: icon }).addTo(map);
                 const secLine = m.secondary ? `<div style="font-size:11px;color:#7a5c32;margin-top:2px;">${m.secondary}</div>` : '';
                 const yearLine = m.year ? `<div style="font-size:11px;color:#7a5c32;margin-top:2px;">Erected: ${m.year}</div>` : '';
+                const erectedLine = m.erected_by && m.erected_by !== 'N/A' ? `<div class="popup-erected-by">By: ${m.erected_by}</div>` : '';
+                const inscriptionBlock = m.inscription ? `<div class="popup-inscription">${m.inscription}</div>` : '';
                 leafletMarker.bindPopup(
-                    `<div style="font-family:'Crimson Text',serif;min-width:160px;">
+                    `<div style="font-family:'Crimson Text',serif;min-width:200px;">
                         <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#3e2a14;margin-bottom:4px;">
                             #${m.id} — ${m.title}
                         </div>
                         <div style="font-size:12px;color:#5a3e1e;padding:3px 6px;background:rgba(139,109,63,0.12);border-radius:3px;display:inline-block;">
                             ${m.primary}
                         </div>
-                        ${secLine}${yearLine}
+                        ${secLine}${yearLine}${erectedLine}${inscriptionBlock}
                     </div>`,
-                    { maxWidth: 280, className: 'vintage-popup' }
+                    { maxWidth: 360, className: 'vintage-popup' }
                 );
                 markerLayers.push({ leafletMarker, year: m.year, data: m });
                 if (counts.hasOwnProperty(m.primary)) counts[m.primary]++;
