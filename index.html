@@ -909,6 +909,127 @@
             border-bottom-color: #b84c28;
         }
 
+        /* ========== Erected By Toggle Button ========== */
+        .erected-toggle {
+            position: absolute;
+            top: 220px;
+            left: 16px;
+            z-index: 900;
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
+            border: 2px solid #8b6d3f;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 15px;
+            color: #3e2a14;
+            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .erected-toggle:hover {
+            background: linear-gradient(180deg, #f0e0c0, #e0c890);
+        }
+
+        /* ========== Erected By Panel ========== */
+        .erected-panel {
+            position: absolute;
+            top: 220px;
+            left: 16px;
+            z-index: 899;
+            background: linear-gradient(145deg, #e8d5b0 0%, #dcc49a 50%, #d4bc8b 100%);
+            border: 2px solid #8b6d3f;
+            border-radius: 6px;
+            padding: 14px 16px;
+            min-width: 240px;
+            max-height: 420px;
+            overflow-y: auto;
+            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
+            transform: translateX(-120%);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.25s ease;
+            pointer-events: none;
+        }
+
+        .erected-panel.open {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .erected-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        .erected-panel::-webkit-scrollbar-thumb {
+            background: rgba(139, 109, 63, 0.35);
+            border-radius: 3px;
+        }
+
+        .erected-panel .legend-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #3e2a14;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(139, 109, 63, 0.35);
+        }
+
+        .erected-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            font-family: 'Crimson Text', serif;
+            font-size: 12.5px;
+            color: #3e2a14;
+            cursor: pointer;
+            padding: 3px 4px;
+            border-radius: 4px;
+            transition: all 0.15s ease;
+        }
+
+        .erected-item:hover {
+            background: rgba(139, 109, 63, 0.12);
+        }
+
+        .erected-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .erected-item.disabled {
+            opacity: 0.3;
+        }
+
+        .erected-item.disabled .erected-label {
+            text-decoration: line-through;
+        }
+
+        .erected-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1.5px solid rgba(255,255,255,0.5);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        .erected-label {
+            flex: 1;
+        }
+
+        .erected-count {
+            font-size: 11px;
+            color: #7a5c32;
+            font-style: italic;
+            min-width: 20px;
+            text-align: right;
+        }
+
         /* ========== Responsive ========== */
         @media (max-width: 600px) {
             .header {
@@ -941,6 +1062,9 @@
             }
             .narrative-panel {
                 width: 100%;
+            }
+            .erected-panel {
+                min-width: 200px;
             }
         }
     </style>
@@ -1080,6 +1204,15 @@
                 <span class="info-label">Center</span>
                 <span class="info-value" id="centerCoord">42.281, -83.743</span>
             </div>
+        </div>
+
+        <!-- Erected By Toggle Button -->
+        <div class="erected-toggle" id="erectedToggle" title="Filter by Institution">🏛</div>
+
+        <!-- Erected By Panel -->
+        <div class="erected-panel" id="erectedPanel">
+            <div class="legend-title">ERECTED BY</div>
+            <div id="erectedItems"></div>
         </div>
 
         <!-- Narrative Toggle Button -->
@@ -1420,6 +1553,84 @@
 
     // ========== Category Toggle ==========
     const hiddenCategories = new Set();
+    const hiddenErected = new Set();
+
+    // ========== Erected By Colors & Panel ==========
+    const erectedColors = {
+        'Ann Arbor Historical Foundation': '#8b6914',
+        'University of Michigan': '#00274C',
+        'Unknown': '#888888',
+        'State of Michigan': '#1B6B3A',
+        'Washtenaw County': '#8B4513',
+        'Pittsfield Township': '#CD853F',
+        'Ann Arbor Historic District Commission': '#B8860B',
+        'Fraternal Organizations': '#4B0082',
+        'Private Donors': '#DC143C',
+        'Patriotic Societies': '#191970',
+        'DTE Energy': '#FF8C00',
+        'City of Ann Arbor': '#2E8B57',
+        'Professional Societies': '#708090',
+        'Federal Government': '#800000',
+        'Community Organizations': '#5F9EA0',
+        'Other': '#696969'
+    };
+
+    // Build Erected By panel items after markers load
+    function buildErectedPanel() {
+        const counts = {};
+        markerLayers.forEach(({ data }) => {
+            const cat = data.erected_by_category || 'Unknown';
+            counts[cat] = (counts[cat] || 0) + 1;
+        });
+
+        const container = document.getElementById('erectedItems');
+        container.innerHTML = '';
+
+        // Sort by count descending
+        const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+        sorted.forEach(([cat, count]) => {
+            const color = erectedColors[cat] || '#888';
+            const div = document.createElement('div');
+            div.className = 'erected-item';
+            div.dataset.erected = cat;
+            div.innerHTML = `
+                <div class="erected-dot" style="background:${color}"></div>
+                <span class="erected-label">${cat}</span>
+                <span class="erected-count">${count}</span>
+            `;
+            div.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (hiddenErected.has(cat)) {
+                    hiddenErected.delete(cat);
+                    this.classList.remove('disabled');
+                } else {
+                    hiddenErected.add(cat);
+                    this.classList.add('disabled');
+                }
+                updateMarkerVisibility();
+            });
+            container.appendChild(div);
+        });
+    }
+
+    // Erected By Toggle
+    const erectedToggle = document.getElementById('erectedToggle');
+    const erectedPanel = document.getElementById('erectedPanel');
+    let erectedOpen = false;
+
+    erectedToggle.addEventListener('click', function() {
+        erectedOpen = !erectedOpen;
+        if (erectedOpen) {
+            erectedPanel.classList.add('open');
+            erectedToggle.style.left = '270px';
+            erectedToggle.innerHTML = '✕';
+            buildErectedPanel();
+        } else {
+            erectedPanel.classList.remove('open');
+            erectedToggle.style.left = '16px';
+            erectedToggle.innerHTML = '🏛';
+        }
+    });
 
     document.querySelectorAll('.legend-item[data-category]').forEach(item => {
         item.addEventListener('click', function(e) {
@@ -1446,8 +1657,9 @@
         let shown = 0;
         markerLayers.forEach(({ leafletMarker, year: mYear, data }) => {
             const categoryVisible = !hiddenCategories.has(data.primary);
+            const erectedVisible = !hiddenErected.has(data.erected_by_category || 'Unknown');
             const timeVisible = (mYear === null || mYear === undefined || mYear <= year);
-            if (categoryVisible && timeVisible) {
+            if (categoryVisible && erectedVisible && timeVisible) {
                 if (!map.hasLayer(leafletMarker)) map.addLayer(leafletMarker);
                 shown++;
             } else {
@@ -1456,7 +1668,7 @@
         });
         timelineYearEl.textContent = '≤ ' + year;
         const withYear = markerLayers.filter(m => m.year !== null && m.year !== undefined);
-        const shownWithYear = withYear.filter(m => m.year <= year && !hiddenCategories.has(m.data.primary)).length;
+        const shownWithYear = withYear.filter(m => m.year <= year && !hiddenCategories.has(m.data.primary) && !hiddenErected.has(m.data.erected_by_category || 'Unknown')).length;
         timelineCountEl.textContent = shownWithYear + '/' + withYear.length + ' dated';
     }
 
