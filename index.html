@@ -633,10 +633,6 @@
 
         /* ========== Narrative Toggle Button ========== */
         .narrative-toggle {
-            position: absolute;
-            top: 180px;
-            left: 16px;
-            z-index: 900;
             width: 34px;
             height: 34px;
             background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
@@ -650,6 +646,7 @@
             color: #3e2a14;
             box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .narrative-toggle:hover {
@@ -1356,6 +1353,9 @@
                 </div>
             </div>
 
+            <!-- Narrative -->
+            <div class="narrative-toggle" id="narrativeToggle" title="Research Narrative">📖</div>
+
             <!-- Table -->
             <div class="left-btn" id="tableToggle" title="Indigenous Markers Table">📋</div>
 
@@ -1450,8 +1450,6 @@
 
 
 
-        <!-- Narrative Toggle Button -->
-        <div class="narrative-toggle" id="narrativeToggle" title="Research Narrative">📖</div>
 
         <!-- Narrative Panel -->
         <div class="narrative-panel" id="narrativePanel">
@@ -1650,14 +1648,37 @@
     fetch('ann_arbor_boundary.json')
         .then(res => res.json())
         .then(geojson => {
+            // Glow layer
             L.geoJSON(geojson, {
-                style: { color: 'rgba(255, 120, 0, 0.25)', weight: 12, fill: false, lineCap: 'round', lineJoin: 'round' }
+                style: { color: 'rgba(255, 120, 0, 0.25)', weight: 12, fill: false, lineCap: 'round', lineJoin: 'round' },
+                interactive: false
             }).addTo(map);
+            // Main dashed boundary — clickable
             L.geoJSON(geojson, {
-                style: { color: '#e63900', weight: 3, opacity: 0.85, fillColor: 'rgba(230, 57, 0, 0.06)', fillOpacity: 1, dashArray: '10, 5', lineCap: 'round', lineJoin: 'round' }
+                style: { color: '#e63900', weight: 3, opacity: 0.85, fillColor: 'rgba(230, 57, 0, 0.06)', fillOpacity: 1, dashArray: '10, 5', lineCap: 'round', lineJoin: 'round' },
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        `<div style="font-family:'Crimson Text',serif;max-width:320px;">
+                            <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#e63900;margin-bottom:8px;border-bottom:1px solid rgba(230,57,0,0.2);padding-bottom:6px;">
+                                City of Ann Arbor Boundary
+                            </div>
+                            <div style="font-size:13px;color:#3e2a14;line-height:1.6;">
+                                The boundaries of Ann Arbor, MI are denoted by a dotted, red line.
+                                Inside Ann Arbor proper, you may notice some small, bounded areas that
+                                do not appear to be a part of the city. These areas are remnants of the
+                                area’s original townships and are called <strong>“township islands.”</strong>
+                                These “township islands” reflect early-twentieth century property lines
+                                and those landowners who refused to annex their land to the city.
+                            </div>
+                        </div>`,
+                        { maxWidth: 360, className: 'vintage-popup' }
+                    );
+                }
             }).addTo(map);
+            // Highlight layer
             L.geoJSON(geojson, {
-                style: { color: 'rgba(255, 255, 255, 0.4)', weight: 1, fill: false, dashArray: '4, 6', lineCap: 'round', lineJoin: 'round' }
+                style: { color: 'rgba(255, 255, 255, 0.4)', weight: 1, fill: false, dashArray: '4, 6', lineCap: 'round', lineJoin: 'round' },
+                interactive: false
             }).addTo(map);
         })
         .catch(err => console.warn('Could not load boundary:', err));
