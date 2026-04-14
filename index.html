@@ -953,6 +953,81 @@
             border-bottom-color: #b84c28;
         }
 
+        /* ========== Narrative Table ========== */
+        .narrative-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .narrative-table-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #3e2a14;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .narrative-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Crimson Text', serif;
+            font-size: 11.5px;
+            color: #3e2a14;
+            line-height: 1.5;
+        }
+
+        .narrative-table thead th {
+            background: linear-gradient(180deg, #c9ae7c, #b89a60);
+            color: #2a1a08;
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 10px;
+            border: 1px solid rgba(139, 109, 63, 0.4);
+            text-align: left;
+            position: sticky;
+            top: 0;
+        }
+
+        .narrative-table tbody td {
+            padding: 8px 10px;
+            border: 1px solid rgba(139, 109, 63, 0.25);
+            vertical-align: top;
+        }
+
+        .narrative-table tbody tr:nth-child(odd) {
+            background: rgba(139, 109, 63, 0.06);
+        }
+
+        .narrative-table tbody tr:nth-child(even) {
+            background: rgba(232, 213, 176, 0.15);
+        }
+
+        .narrative-table tbody tr:hover {
+            background: rgba(184, 76, 40, 0.08);
+        }
+
+        .narrative-table .inscription-cell {
+            max-width: 220px;
+            font-size: 10.5px;
+            line-height: 1.4;
+            color: #5a3e1e;
+        }
+
+        .narrative-table .title-cell {
+            font-weight: 700;
+            color: #b84c28;
+            white-space: nowrap;
+        }
+
+        .narrative-table .meta-cell {
+            white-space: nowrap;
+            font-size: 11px;
+        }
+
         /* ========== Erected By Toggle Button ========== */
         .erected-toggle {
             position: absolute;
@@ -1339,6 +1414,71 @@
                 <div class="narrative-blockquote">"[write] Indians out of existence…sometimes through precise declarations that the 'last' of them had passed; the colonial regime is constructed as the 'first' to bring 'civilization' and authentic history to the region" (O'Brien 2010: xii-xv).</div>
 
                 <p class="narrative-paragraph">While some of these markers appear to highlight Ann Arbor's Indigenous history, we conclude that they do not provide a comprehensive account of the past, and instead, engage in the firsting-and-lasting of the region's Anishinaabe population. As provided in the example above, while these markers correctly identify Native Americans as the region's first inhabitants, they later conclude how the region was "developed" or "urbanized" by nineteenth-century American settlers. Therefore, Ann Arbor's historical markers perpetuate the colonial state, and memorialize the firsting-and-lasting of its Indigenous populations.</p>
+
+                <!-- Table 1: Indigenous Markers -->
+                <div class="narrative-table-container">
+                    <div class="narrative-table-title">Table 1. List of Ann Arbor, Michigan's Historical Markers having Indigenous Peoples as the Primary Subject</div>
+                    <table class="narrative-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Primary Subject</th>
+                                <th>Secondary Subject</th>
+                                <th>Inscription</th>
+                                <th>Date Erected</th>
+                                <th>Erected By</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="title-cell">Native American Trails</td>
+                                <td>Indigenous</td>
+                                <td>Colonial/settler</td>
+                                <td class="inscription-cell">Centuries ago, Indian trails crossed the landscape of Washtenaw County. These paths connected Indian villages to fertile hunting and fishing grounds throughout Michigan. When settlers arrived in the County during the 19th century, these same trails were used to link growing communities. Eventually, some of these trails became part of the current road system. Parker Mill Park is located along a prehistoric Native American trail that connected the present-day cities of Ann Arbor and Ypsilanti…</td>
+                                <td class="meta-cell">N/A</td>
+                                <td class="meta-cell">Washtenaw County Historic District Commission</td>
+                                <td class="meta-cell">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="title-cell">Native American Land Gift 1817</td>
+                                <td>Indigenous</td>
+                                <td>Colonial/settler</td>
+                                <td class="inscription-cell">This plaque commemorates the grant of lands from the Ojibwe (Chippewa), Odawa (Ottawa), and Bodewadimi (Potawatomi), through the Treaty of Fort Meigs, which states that “believing they may wish some of their children hereafter educated, [they] do grant to the rector of the Catholic church of St. Anne of Detroit…” The rector was Gabriel Richard, a founder and first vice president of the corporation of the college, chartered by the territorial legislature as the University of Michigania in 1817.</td>
+                                <td class="meta-cell">2002</td>
+                                <td class="meta-cell">History and Traditions Committee, University of Michigan</td>
+                                <td class="meta-cell">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="title-cell">Indian Trails, Roads, and Trains</td>
+                                <td>Indigenous</td>
+                                <td>Colonial/settler</td>
+                                <td class="inscription-cell">Native Americans came from the northeast down the Pontiac Trail from the east down the Broadway hill following a trail that went through what later became Plymouth, and from the southeast up the Huron River along the Potawatomi Trail… Anishinaabe includes Potawatomi, Ojibwe, and Odawa tribes who all lived in this region.</td>
+                                <td class="meta-cell">2014</td>
+                                <td class="meta-cell">University of Michigan</td>
+                                <td class="meta-cell">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="title-cell">Welcome to the Native American Trail in West Park!</td>
+                                <td>Indigenous</td>
+                                <td>Colonial/settler</td>
+                                <td class="inscription-cell">“Aaniin, Boozhoo!” Greetings from the Ojibwe, Odawa, and Potawatomi— the Anishinabae people of the Three Fires Confederacy. This footpath before you is part of an extensive system of trails that connected diverse groups of Native peoples in the Great Lakes region and beyond… May you walk in balance with Mother Earth.</td>
+                                <td class="meta-cell">2018</td>
+                                <td class="meta-cell">City of Ann Arbor Parks and Recreation</td>
+                                <td class="meta-cell">Based on work and research by Margaret Noodin and her fellow Native American associates; Ann Arbor’s Little Buddies and Big Buddies program</td>
+                            </tr>
+                            <tr>
+                                <td class="title-cell">Untitled (Trails of the Potawatomi)</td>
+                                <td>Indigenous</td>
+                                <td>Colonial/settler</td>
+                                <td class="inscription-cell">This boulder marks the site where trails of the Potawatomi and other Indian tribes crossed the Huron River. About thirty rods N.E. stood the Washtenaw Hotel, a famous tavern on the stage coach routes from Detroit and Pontiac to Chicago following in general the old Indian trails.</td>
+                                <td class="meta-cell">1924</td>
+                                <td class="meta-cell">Sons of the American Revolution</td>
+                                <td class="meta-cell">N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <!-- References -->
                 <div class="narrative-references">
