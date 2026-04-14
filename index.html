@@ -418,12 +418,18 @@
             border-color: rgba(139, 109, 63, 0.3) !important;
         }
 
-        /* ========== Legend Panel ========== */
-        .legend-toggle {
+        /* ========== Left Controls Container ========== */
+        .left-controls {
             position: absolute;
             top: 140px;
             left: 16px;
             z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .left-btn {
             width: 34px;
             height: 34px;
             background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
@@ -433,39 +439,36 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-family: 'Crimson Text', serif;
-            font-size: 16px;
+            font-size: 15px;
             color: #3e2a14;
             box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
             transition: all 0.2s ease;
+            flex-shrink: 0;
         }
 
-        .legend-toggle:hover {
+        .left-btn:hover {
             background: linear-gradient(180deg, #f0e0c0, #e0c890);
         }
 
+        /* ========== Legend Panel ========== */
         .legend-panel {
-            position: absolute;
-            top: 140px;
-            left: 16px;
-            z-index: 899;
             background: linear-gradient(145deg, #e8d5b0 0%, #dcc49a 50%, #d4bc8b 100%);
             border: 2px solid #8b6d3f;
             border-radius: 6px;
-            padding: 14px 16px;
+            padding: 0;
             min-width: 200px;
             max-width: 320px;
-            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
-            transform: translateX(-120%);
+            max-height: 0;
+            overflow: hidden;
             opacity: 0;
-            transition: transform 0.3s ease, opacity 0.25s ease;
-            pointer-events: none;
+            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
+            transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
         }
 
         .legend-panel.open {
-            transform: translateX(0);
+            max-height: 600px;
             opacity: 1;
-            pointer-events: all;
+            padding: 14px 16px;
         }
 
         .legend-note {
@@ -966,29 +969,6 @@
         }
 
         /* ========== Table Overlay ========== */
-        .table-toggle {
-            position: absolute;
-            top: 260px;
-            left: 16px;
-            z-index: 900;
-            width: 34px;
-            height: 34px;
-            background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
-            border: 2px solid #8b6d3f;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 15px;
-            color: #3e2a14;
-            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .table-toggle:hover {
-            background: linear-gradient(180deg, #f0e0c0, #e0c890);
-        }
 
         .table-overlay {
             position: fixed;
@@ -1118,55 +1098,25 @@
             font-size: 12.5px;
         }
 
-        /* ========== Erected By Toggle Button ========== */
-        .erected-toggle {
-            position: absolute;
-            top: 300px;
-            left: 16px;
-            z-index: 900;
-            width: 34px;
-            height: 34px;
-            background: linear-gradient(180deg, #e8d5b0, #d4bc8b);
-            border: 2px solid #8b6d3f;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 15px;
-            color: #3e2a14;
-            box-shadow: 0 2px 8px rgba(60, 40, 10, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .erected-toggle:hover {
-            background: linear-gradient(180deg, #f0e0c0, #e0c890);
-        }
-
         /* ========== Erected By Panel ========== */
         .erected-panel {
-            position: absolute;
-            top: 300px;
-            left: 16px;
-            z-index: 899;
             background: linear-gradient(145deg, #e8d5b0 0%, #dcc49a 50%, #d4bc8b 100%);
             border: 2px solid #8b6d3f;
             border-radius: 6px;
-            padding: 14px 16px;
+            padding: 0;
             min-width: 240px;
-            max-height: 420px;
-            overflow-y: auto;
-            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
-            transform: translateX(-120%);
+            max-height: 0;
+            overflow: hidden;
             opacity: 0;
-            transition: transform 0.3s ease, opacity 0.25s ease;
-            pointer-events: none;
+            box-shadow: 0 3px 12px rgba(60, 40, 10, 0.3), inset 0 1px 0 rgba(255, 245, 220, 0.4);
+            transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
         }
 
         .erected-panel.open {
-            transform: translateX(0);
+            max-height: 500px;
             opacity: 1;
-            pointer-events: all;
+            padding: 14px 16px;
+            overflow-y: auto;
         }
 
         .erected-panel::-webkit-scrollbar {
@@ -1375,34 +1325,45 @@
             </svg>
         </div>
 
-        <!-- Legend Toggle Button -->
-        <div class="legend-toggle" id="legendToggle" title="Toggle Legend">☰</div>
+        <!-- Left Controls Container -->
+        <div class="left-controls">
+            <!-- Legend -->
+            <div class="left-btn" id="legendToggle" title="Toggle Legend">☰</div>
+            <div class="legend-panel" id="legendPanel">
+                <div class="legend-title">LEGEND</div>
+                <div class="legend-item" data-category="Colonial/settler" style="cursor:pointer;">
+                    <div class="legend-dot" style="background:#8b6914;">n</div>
+                    <span class="legend-label">Colonial / Settler</span>
+                    <span class="legend-count" id="countColonial"></span>
+                </div>
+                <div class="legend-item" data-category="Indigenous" style="cursor:pointer;">
+                    <div class="legend-dot" style="background:#b84c28;">n</div>
+                    <span class="legend-label">Indigenous</span>
+                    <span class="legend-count" id="countIndigenous"></span>
+                </div>
+                <div class="legend-item" data-category="African American/Enslaved/Freed Blacks" style="cursor:pointer;">
+                    <div class="legend-dot" style="background:#5a0f8a;">n</div>
+                    <span class="legend-label">African American</span>
+                    <span class="legend-count" id="countAA"></span>
+                </div>
+                <div class="legend-item" data-category="Misc." style="cursor:pointer;">
+                    <div class="legend-dot" style="background:#2a7a4c;">n</div>
+                    <span class="legend-label">Misc.</span>
+                    <span class="legend-count" id="countMisc"></span>
+                </div>
+                <div class="legend-note">
+                    <strong style="font-style:normal;">Note:</strong> The “primary subject” categories were determined using the inscriptions present on the historical markers. These categories reflect which historical narratives (or group heritage) emerged from these memorializations (i.e., colonial/settler, Indigenous, African American/Enslaved/Freed Blacks, foreign nation, and miscellaneous). In some cases, this categorization was not clearly differentiated as differing communities had complex relationships and interactions with one another, so we created a secondary subject category to reflect such (when applicable and pertaining to the marker’s inscriptions).
+                </div>
+            </div>
 
-        <!-- Legend Panel -->
-        <div class="legend-panel" id="legendPanel">
-            <div class="legend-title">LEGEND</div>
-            <div class="legend-item" data-category="Colonial/settler" style="cursor:pointer;">
-                <div class="legend-dot" style="background:#8b6914;">n</div>
-                <span class="legend-label">Colonial / Settler</span>
-                <span class="legend-count" id="countColonial"></span>
-            </div>
-            <div class="legend-item" data-category="Indigenous" style="cursor:pointer;">
-                <div class="legend-dot" style="background:#b84c28;">n</div>
-                <span class="legend-label">Indigenous</span>
-                <span class="legend-count" id="countIndigenous"></span>
-            </div>
-            <div class="legend-item" data-category="African American/Enslaved/Freed Blacks" style="cursor:pointer;">
-                <div class="legend-dot" style="background:#5a0f8a;">n</div>
-                <span class="legend-label">African American</span>
-                <span class="legend-count" id="countAA"></span>
-            </div>
-            <div class="legend-item" data-category="Misc." style="cursor:pointer;">
-                <div class="legend-dot" style="background:#2a7a4c;">n</div>
-                <span class="legend-label">Misc.</span>
-                <span class="legend-count" id="countMisc"></span>
-            </div>
-            <div class="legend-note">
-                <strong style="font-style:normal;">Note:</strong> The “primary subject” categories were determined using the inscriptions present on the historical markers. These categories reflect which historical narratives (or group heritage) emerged from these memorializations (i.e., colonial/settler, Indigenous, African American/Enslaved/Freed Blacks, foreign nation, and miscellaneous). In some cases, this categorization was not clearly differentiated as differing communities had complex relationships and interactions with one another, so we created a secondary subject category to reflect such (when applicable and pertaining to the marker’s inscriptions).
+            <!-- Table -->
+            <div class="left-btn" id="tableToggle" title="Indigenous Markers Table">📋</div>
+
+            <!-- Erected By -->
+            <div class="left-btn" id="erectedToggle" title="Filter by Institution">🏛</div>
+            <div class="erected-panel" id="erectedPanel">
+                <div class="legend-title">ERECTED BY</div>
+                <div id="erectedItems"></div>
             </div>
         </div>
 
@@ -1417,9 +1378,6 @@
                 <span class="info-value" id="centerCoord">42.281, -83.743</span>
             </div>
         </div>
-
-        <!-- Table Toggle Button -->
-        <div class="table-toggle" id="tableToggle" title="Indigenous Markers Table">📋</div>
 
         <!-- Table Overlay -->
         <div class="table-overlay" id="tableOverlay">
@@ -1490,14 +1448,7 @@
             </div>
         </div>
 
-        <!-- Erected By Toggle Button -->
-        <div class="erected-toggle" id="erectedToggle" title="Filter by Institution">🏛</div>
 
-        <!-- Erected By Panel -->
-        <div class="erected-panel" id="erectedPanel">
-            <div class="legend-title">ERECTED BY</div>
-            <div id="erectedItems"></div>
-        </div>
 
         <!-- Narrative Toggle Button -->
         <div class="narrative-toggle" id="narrativeToggle" title="Research Narrative">📖</div>
@@ -1839,11 +1790,9 @@
         legendOpen = !legendOpen;
         if (legendOpen) {
             legendPanel.classList.add('open');
-            legendToggle.style.left = '230px';
             legendToggle.innerHTML = '✕';
         } else {
             legendPanel.classList.remove('open');
-            legendToggle.style.left = '16px';
             legendToggle.innerHTML = '☰';
         }
     });
@@ -1938,12 +1887,10 @@
         erectedOpen = !erectedOpen;
         if (erectedOpen) {
             erectedPanel.classList.add('open');
-            erectedToggle.style.left = '270px';
             erectedToggle.innerHTML = '✕';
             buildErectedPanel();
         } else {
             erectedPanel.classList.remove('open');
-            erectedToggle.style.left = '16px';
             erectedToggle.innerHTML = '🏛';
         }
     });
