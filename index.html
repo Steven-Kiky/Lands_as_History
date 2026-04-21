@@ -324,11 +324,6 @@
             border: none !important;
         }
 
-        @keyframes taubmanPulse {
-            0%, 100% { box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 2px rgba(196,18,48,0.3); }
-            50% { box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 6px rgba(196,18,48,0.15); }
-        }
-
         .heritage-marker div:hover {
             transform: scale(1.25);
             z-index: 9999 !important;
@@ -1682,45 +1677,6 @@
             }).addTo(map);
         })
         .catch(err => console.warn('Could not load boundary:', err));
-
-    // ========== Taubman College — special landmark ==========
-    const taubmanIcon = L.divIcon({
-        className: 'heritage-marker',
-        html: `<div style="
-            background: #c41230;
-            color: #fff;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: 700;
-            border: 2px solid #ffd700;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 0 2px rgba(196,18,48,0.3);
-            cursor: pointer;
-            animation: taubmanPulse 2s ease-in-out infinite;
-        ">★</div>`,
-        iconSize: [30, 30],
-        iconAnchor: [15, 15],
-        popupAnchor: [0, -19]
-    });
-    const taubmanMarker = L.marker([42.29245, -83.71615], { icon: taubmanIcon, zIndexOffset: 1000 }).addTo(map);
-    taubmanMarker.bindPopup(
-        `<div style="font-family:'Crimson Text',serif;min-width:180px;">
-            <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#c41230;margin-bottom:4px;">
-                ★ Taubman College
-            </div>
-            <div style="font-size:12px;color:#3e2a14;">
-                College of Architecture &amp; Urban Planning
-            </div>
-            <div style="font-size:11px;color:#7a5c32;margin-top:3px;">
-                2000 Bonisteel Blvd, Ann Arbor, MI
-            </div>
-        </div>`,
-        { maxWidth: 280, className: 'vintage-popup' }
-    );
 
     // ========== Heritage Markers ==========
     function getMarkerColor(primary) {
